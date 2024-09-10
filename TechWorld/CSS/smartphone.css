@@ -2,6 +2,53 @@
   min-height: 2000px;
 }
 
-.box {
-  background-color: aquamarine;
+.mainBox .picBox {
+  width: 100%;
+  max-width: 200px;
+
+  aspect-ratio: 4 / 5; /* יחס גובה-רוחב לשמירה על פרופורציות */
+}
+
+.mainBox .picBox .image {
+  width: 100%;
+  height: 100%;
+}
+
+.mainBox .middleBox {
+  height: 200px;
+}
+
+.mainBox .middleBox .logo {
+  width: 150px;
+  height: 70px;
+}
+
+.mainBox .delivery {
+  display: flex; /* same row */
+}
+
+.mainBox .delivery .icon_delivery {
+  height: 30px;
+  width: 30px;
+
+  border-radius: 50%;
+  background-color: green;
+}
+
+.mainBox .bottomBox {
+  display: flex; /* same row */
+  height: 100px;
+}
+
+.mainBox .bottomBox .cartButton {
+  border-radius: 10%;
+  border: none;
+
+  height: 35px;
+  width: 60px;
+
+  background-color: rgb(244, 200, 5);
+}
+.mainBox #price {
+  padding-left: 100px;
 }
