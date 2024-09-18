@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .range-slider-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .range-slider-container input[type="text"] {
+        width: 80px;
+        text-align: center;
+      }
+
+      .slider {
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      .range-slider-container input[type="range"] {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <h4>מחיר</h4>
+          <div class="range-slider-container">
+            <input type="text" id="minPrice" value="99" readonly />
+            <span>-</span>
+            <input type="text" id="maxPrice" value="8199" readonly />
+          </div>
+          <input
+            type="range"
+            class="form-range slider"
+            min="99"
+            max="8199"
+            id="priceRange"
+            value="99"
+          />
+          <input
+            type="range"
+            class="form-range slider"
+            min="99"
+            max="8199"
+            id="priceRangeMax"
+            value="8199"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
