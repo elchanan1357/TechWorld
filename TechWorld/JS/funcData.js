@@ -209,6 +209,16 @@ function addToBox(_json, _id) {
      <h3 id="price"  class="mb-0" style="margin-top:0;">${_json.price}</h3>
   </div>
   `;
+
+  //button to add  element to cart
+  mainBox.querySelector(".cartButton").addEventListener("click", function () {
+    addToCart(_json);
+  });
+
+  //button to add  element to like
+  mainBox.querySelector(".icon_like").addEventListener("click", function () {
+    likeItems(_json, this);
+  });
 }
 
 function createArrow(_up, _down, i) {
@@ -348,3 +358,30 @@ function priceFromAToB() {}
 function changeView() {}
 
 function reset() {}
+
+let likedItems = JSON.parse(localStorage.getItem("likedItems")) || [];
+
+function likeItems(product, buttonElement) {
+  // בדיקה אם המוצר קיים ברשימת הפריטים האהובים
+  let exists = likedItems.some(
+    (item) => item.name === product.name && item.type === product.type
+  );
+  if (!exists) {
+    likedItems.push(product);
+    localStorage.setItem("likedItems", JSON.stringify(likedItems));
+    alert("המוצר נוסף לרשימת הפריטים האהובים!");
+
+    buttonElement.style.color = "red";
+  } else {
+    // הסרת המוצר מרשימת הפריטים האהובים
+    likedItems = likedItems.filter(
+      (likedItem) => likedItem.type !== product.type
+    );
+    localStorage.setItem("likedItems", JSON.stringify(likedItems));
+    alert("המוצר הוסר מרשימת הפריטים האהובים!");
+
+    buttonElement.style.color = "black";
+  }
+
+  console.log("רשימת הפריטים האהובים כרגע:", likedItems);
+}

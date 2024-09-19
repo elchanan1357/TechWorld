@@ -7,6 +7,8 @@ window.onload = function () {
   }
   //smartphones_arr.forEach((val) => addToHtml(val, "Smartphone"));
   for (let i = 0; i < 5; i++) createArrow("arrow_up", "arrow_down", i);
+
+  localStorage.clear();
 };
 
 function addBanaras(_id) {
