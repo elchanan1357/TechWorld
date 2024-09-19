@@ -1,11 +1,11 @@
 //when window is on loading
 window.onload = function () {
   createTopLine();
-  for (let i = 0; i < smartphones_arr.length; i++) {
-    if (i == 4) addBanaras("Smartphone");
-    addToBox(smartphones_arr[i], "Smartphone");
-  }
-  //smartphones_arr.forEach((val) => addToHtml(val, "Smartphone"));
+  // for (let i = 0; i < smartphones_arr.length; i++) {
+  //   if (i == 4) addBanaras("Smartphone");
+  //   addToBox(smartphones_arr[i], "Smartphone");
+  // }
+  smartphones_arr.forEach((val) => addToBox(val, "Smartphone"));
   for (let i = 0; i < 5; i++) createArrow("arrow_up", "arrow_down", i);
 
   localStorage.clear();

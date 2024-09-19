@@ -1,4 +1,4 @@
 window.onload = function () {
-  computer_arr.forEach((val) => addToHtml(val, "Computer"));
+  computer_arr.forEach((val) => addToBox(val, "Computer"));
   localStorage.clear();
 };

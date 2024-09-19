@@ -13,18 +13,20 @@
     <link rel="stylesheet" href="../CSS/data.css" />
   </head>
   <body>
-    <div class="row">
-      <div class="col-auto mr-auto">.col-auto .mr-auto</div>
-      <div class="col-auto">.col-auto</div>
-    </div>
-    <a href="cart.html">cart</a>
-    <a href="Smartphone.html">Smartphone</a>
-    <!-- contain row of element -->
-    <div class="container">
-      <div id="Computer" class="row"></div>
+    <div class="container-fluid">
+      <div class="container">
+        <!-- top line -->
+        <div id="topLine" class="row m-2" width="100%"></div>
+
+        <!-- contain row of element -->
+        <div id="Computer" class="main row">
+          <span id="banner"></span>
+        </div>
+      </div>
     </div>
 
     <script src="../JS/data.js"></script>
+    <script src="../JS/funcData.js"></script>
     <script src="../JS/Computer.js"></script>
   </body>
 </html>
