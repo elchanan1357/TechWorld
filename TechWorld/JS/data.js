@@ -7,7 +7,8 @@ const smartphones_arr = [
     type: "A35",
     company: "Samsung",
     color: "Black",
-    details: "",
+    details:
+      "Samsung Galaxy A35 5G 8GB+256GB - Awesome Iceblue - 2 Year Warranty",
     price: "₪3,645",
   },
   {
@@ -28,7 +29,8 @@ const smartphones_arr = [
     type: "A3",
     company: "Xiaomi",
     color: "Black",
-    details: "",
+    details:
+      "Xiaomi Redmi A3 4GB+128GB Forest Green - 2 Years Warranty by Hemilton",
     price: "₪389",
   },
   {
@@ -38,7 +40,8 @@ const smartphones_arr = [
     type: "S21 FE",
     company: "Samsung",
     color: "White",
-    details: "",
+    details:
+      "Samsung Galaxy S21 FE 5G 8GB+256GB Graphite SM-G990B2/DS - 2 Year Warranty",
     price: "₪1,490",
   },
   {
@@ -59,7 +62,8 @@ const smartphones_arr = [
     type: "S24 Ultra",
     company: "Samsung",
     color: "White",
-    details: "",
+    details:
+      "Samsung Galaxy S24 Ultra 12GB+256GB Titanium Gray (SM-S928B/DS) - 1 Year Official",
     price: "₪4,649",
   },
   {
@@ -69,7 +73,8 @@ const smartphones_arr = [
     type: "Note 13 pro+",
     company: "Xiaomi",
     color: "Black",
-    details: "",
+    details:
+      "Xiaomi Redmi Note 13 Pro+ 5G 12GB+512GB Aurora Purple - 2 Years Warranty by Hemilton",
     price: "₪1,720",
   },
   {
@@ -101,7 +106,7 @@ const smartphones_arr = [
     type: "Note 20 Ultra",
     company: "Samsung",
     color: "Black",
-    details: "",
+    details: "Samsung -  Galaxy Note20 Ultra 5G 128GB  - Mystic Black",
     price: "₪4,649",
   },
   {
@@ -111,7 +116,7 @@ const smartphones_arr = [
     type: "12",
     company: "Xiaomi",
     color: "Black",
-    details: "",
+    details: "Xiaomi Redmi 12 4GB+128GB - Midnight Black",
     price: "₪559",
   },
   {
@@ -121,7 +126,7 @@ const smartphones_arr = [
     type: "M6",
     company: "Xiaomi",
     color: "Black",
-    details: "",
+    details: "Xiaomi Poco M6 6GB+128GB Purple - 2 Years Warranty by Hemilton",
     price: "₪699",
   },
 ];
@@ -173,5 +178,132 @@ const computer_arr = [
     details:
       " Apple - MacBook Air 15 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Starlight",
     price: "₪5,429",
+  },
+];
+
+const props_arr = [
+  {
+    image: "props/protector.jpg",
+    logo: "Smartphone/logo_Samsung.jpg",
+    name: "Galaxy",
+    type: "A35",
+    company: "Samsung",
+    color: "Black",
+    details: "",
+    price: "₪3,645",
+  },
+  {
+    image: "props/a_15.jpg",
+    logo: "props/logo_apple.jpg",
+    name: "iPhone",
+    type: "15",
+    company: "Apple",
+    color: "White",
+    details:
+      "Apple iPhone 15 256GB - Black - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones",
+    price: "₪4,949",
+  },
+  {
+    image: "props/x_a3.jpg",
+    logo: "props/logo_Xiaomi.jpg",
+    name: "Redmi",
+    type: "A3",
+    company: "Xiaomi",
+    color: "Black",
+    details: "",
+    price: "₪389",
+  },
+  {
+    image: "props/s_s21_fe.jpg",
+    logo: "props/logo_Samsung.jpg",
+    name: "Galaxy",
+    type: "S21 FE",
+    company: "Samsung",
+    color: "White",
+    details: "",
+    price: "₪1,490",
+  },
+  {
+    image: "props/a_15_pro _max.jpg",
+    logo: "props/logo_apple.jpg",
+    name: "iPhone",
+    type: "15 Pro Max",
+    company: "Apple",
+    color: "Black",
+    details:
+      "Apple iPhone 15 Pro Max 256GB - Black Titanium - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones",
+    price: "₪5,429",
+  },
+  {
+    image: "props/s_s24_ultra.jpg",
+    logo: "props/logo_Samsung.jpg",
+    name: "Galaxy",
+    type: "S24 Ultra",
+    company: "Samsung",
+    color: "White",
+    details: "",
+    price: "₪4,649",
+  },
+  {
+    image: "props/x_13_pro+.jpg",
+    logo: "props/logo_Xiaomi.jpg",
+    name: "Redmi",
+    type: "Note 13 pro+",
+    company: "Xiaomi",
+    color: "Black",
+    details: "",
+    price: "₪1,720",
+  },
+  {
+    image: "props/a_14_plus.jpg",
+    logo: "props/logo_apple.jpg",
+    name: "iPhone",
+    type: "14 Plus",
+    company: "Apple",
+    color: "White",
+    details:
+      "Apple iPhone 14 Plus 128GB - Blue - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones",
+    price: "₪2,899",
+  },
+  {
+    image: "props/a_13.jpg",
+    logo: "props/logo_apple.jpg",
+    name: "iPhone",
+    type: "13",
+    company: "Apple",
+    color: "Black",
+    details:
+      "Apple iPhone 13 128GB Starlight - 1 Year Warranty by The Official Distributor - Without Charger And Without Headphones",
+    price: "₪2,499",
+  },
+  {
+    image: "props/a_14_plus.jpg",
+    logo: "props/logo_Samsung.jpg",
+    name: "Galaxy",
+    type: "Note 20 Ultra",
+    company: "Samsung",
+    color: "Black",
+    details: "",
+    price: "₪4,649",
+  },
+  {
+    image: "props/x_12.jpg",
+    logo: "props/logo_Xiaomi.jpg",
+    name: "Redmi",
+    type: "12",
+    company: "Xiaomi",
+    color: "Black",
+    details: "",
+    price: "₪559",
+  },
+  {
+    image: "props/x_paco_m6.jpg",
+    logo: "props/logo_Xiaomi.jpg",
+    name: "Poco",
+    type: "M6",
+    company: "Xiaomi",
+    color: "Black",
+    details: "",
+    price: "₪699",
   },
 ];

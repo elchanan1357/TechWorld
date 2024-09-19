@@ -105,8 +105,8 @@ body {
   background: none;
 }
 
-#Smartphone {
-  min-height: 2000px;
+.main {
+  min-height: 1300px;
 }
 
 .mainBox .picBox {
@@ -121,17 +121,21 @@ body {
   height: 100%;
 }
 
-.mainBox .middleBox {
-  height: 200px;
+.mainBox .middleBox .icon_like {
+  border-radius: 50%; /* עיגול מושלם */
+  background: white;
+  border: 1px solid gray; /* מסגרת דקה בגובה 2 פיקסלים וצבע שחור */
+  width: 35px; /* או גובה ורוחב מותאמים אישית לפי הצורך */
+  height: 35px;
 }
 
 .mainBox .middleBox .logo {
   width: 150px;
   height: 70px;
 }
-
-.mainBox .delivery {
-  display: flex; /* same row */
+p {
+  min-height: 100px;
+  min-width: 100%;
 }
 
 .mainBox .delivery .icon_delivery {
@@ -144,7 +148,7 @@ body {
 
 .mainBox .bottomBox {
   display: flex; /* same row */
-  height: 100px;
+  min-height: 50px;
 }
 
 .mainBox .bottomBox .cartButton {
