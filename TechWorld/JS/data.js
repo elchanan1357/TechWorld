@@ -131,6 +131,7 @@ const smartphones_arr = [
   },
 ];
 
+//all type of computers in the store
 const computer_arr = [
   {
     image: "Computers/a_air_13.jpg",
@@ -177,6 +178,97 @@ const computer_arr = [
     color: "Starlight",
     details:
       " Apple - MacBook Air 15 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Starlight",
+    price: "₪5,429",
+  },
+
+  {
+    image: "Computers/l_yoga_slim_x7.jpg",
+    logo: "Computers/logo_lenovo.jpg",
+    name: "Yoga",
+    type: "Slim 7x",
+    company: "Lenovo",
+    color: "Cosmic Blue",
+    details:
+      "Lenovo - Yoga Slim 7x - Copilot+ PC - 14.5 3K OLED Touch-Screen Laptop - Snapdragon X Elite - 16GB Memory - 512GB SSD - Cosmic Blue",
+    price: "₪5,429",
+  },
+  {
+    image: "Computers/l_ideapad_1.jpg",
+    logo: "Computers/logo_lenovo.jpg",
+    name: "Ideapad",
+    type: "Ideapad 1 ",
+    company: "Lenovo",
+    color: "Cloud Gray",
+    details:
+      "Lenovo - Ideapad 1 15.6 Full HD Touchscreen Laptop - Ryzen 7 5700U with 16GB Memory - AMD Radeon Graphics - 512GB SSD - Cloud Gray",
+    price: "₪5,429",
+  },
+  {
+    image: "Computers/l_Legion_Pro.jpg",
+    logo: "Computers/logo_lenovo.jpg",
+    name: "Legion ",
+    type: "Pro 5i",
+    company: "Lenovo",
+    color: "Onyx Grey",
+    details:
+      "Lenovo - Legion Pro 5i 16 Gaming Laptop WQXGA - Intel 14th Gen Core i9 with 32GB Memory - NVIDIA GeForce RTX 4070 8GB - 2TB SSD - Onyx Grey",
+    price: "₪5,429",
+  },
+  {
+    image: "Computers/l_LOQ.jpg",
+    logo: "Computers/logo_lenovo.jpg",
+    name: " LOQ ",
+    type: "LOQ 15.6 Gaming",
+    company: "Lenovo",
+    color: "Luna Grey",
+    details:
+      "Lenovo - LOQ 15.6 Gaming Laptop FHD - AMD Ryzen 7 7435HS with 16GB Memory - NVIDIA GeForce RTX 4060 8GB - 512GB SSD - Luna Grey",
+    price: "₪5,429",
+  },
+
+  {
+    image: "Computers/d_xps_13.jpg",
+    logo: "Computers/logo_dell.jpg",
+    name: "XPS 13 ",
+    type: "13",
+    company: "Dell",
+    color: " Graphite",
+    details:
+      "Dell - XPS 13 - Copilot+ PC - 13.4 OLED Touch-Screen Laptop - Snapdragon X Elite w/ Dual Core Boost - 16GB Memory - 512GB SSD - Graphite",
+    price: "₪5,429",
+  },
+  {
+    image: "Computers/d_Inspiron.jpg",
+    logo: "Computers/logo_dell.jpg",
+    name: "Inspiron ",
+    type: "Inspiron 16 2-in-1",
+    company: "Dell",
+    color: "Midnight Blue",
+    details:
+      "Dell - Inspiron 16 2-in-1 Mini-LED Touch Laptop Intel Core Ultra 7 Processor - 32GB Memory – 1TB SDD - Intel Arc Graphics - Midnight Blue",
+    price: "₪5,429",
+  },
+
+  {
+    image: "Computers/h_OmniBook.jpg",
+    logo: "Computers/logo_hp.jpg",
+    name: "OmniBook ",
+    type: "OmniBook X",
+    company: "HP",
+    color: " Meteor Silver",
+    details:
+      "HP - OmniBook X - Copilot+ PC - 14 2.2K Touch-Screen Laptop - Snapdragon X Elite - 16GB Memory - 1TB SDD - Meteor Silver",
+    price: "₪5,429",
+  },
+  {
+    image: "Computers/h_Spectre.jpg",
+    logo: "Computers/logo_hp.jpg",
+    name: " Spectre ",
+    type: "Spectre 2-in-1",
+    company: "HP",
+    color: "Nightfall Black",
+    details:
+      "HP - Spectre 2-in-1 14 2.8K OLED Touch-Screen Laptop - Intel Core Ultra 7 - Intel Evo Edition - 16GB Memory - 1TB SSD - Nightfall Black",
     price: "₪5,429",
   },
 ];
