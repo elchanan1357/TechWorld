@@ -28,7 +28,7 @@ const smartphones_arr = [
     name: "Redmi",
     type: "A3",
     company: "Xiaomi",
-    color: "Black",
+    color: "Green",
     details:
       "Xiaomi Redmi A3 4GB+128GB Forest Green - 2 Years Warranty by Hemilton",
     price: "₪389",
@@ -39,7 +39,7 @@ const smartphones_arr = [
     name: "Galaxy",
     type: "S21 FE",
     company: "Samsung",
-    color: "White",
+    color: "Silver",
     details:
       "Samsung Galaxy S21 FE 5G 8GB+256GB Graphite SM-G990B2/DS - 2 Year Warranty",
     price: "₪1,490",
@@ -50,7 +50,7 @@ const smartphones_arr = [
     name: "iPhone",
     type: "15 Pro Max",
     company: "Apple",
-    color: "Black",
+    color: "White",
     details:
       "Apple iPhone 15 Pro Max 256GB - Black Titanium - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones",
     price: "₪5,429",
@@ -83,7 +83,7 @@ const smartphones_arr = [
     name: "iPhone",
     type: "14 Plus",
     company: "Apple",
-    color: "White",
+    color: "red",
     details:
       "Apple iPhone 14 Plus 128GB - Blue - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones",
     price: "₪2,899",
@@ -125,7 +125,7 @@ const smartphones_arr = [
     name: "Poco",
     type: "M6",
     company: "Xiaomi",
-    color: "Black",
+    color: "Silver",
     details: "Xiaomi Poco M6 6GB+128GB Purple - 2 Years Warranty by Hemilton",
     price: "₪699",
   },
@@ -133,14 +133,13 @@ const smartphones_arr = [
 
 const props_arr = [
   {
-    image: "props/protector.jpg",
-    logo: "Smartphone/logo_Samsung.jpg",
-    name: "Galaxy",
-    type: "A35",
-    company: "Samsung",
+    image: "props/mouse1.jpg",
+    logo: "Smartphone/logo_apple.jpg",
+    name: "mouse",
+    company: "Apple",
     color: "Black",
     details: "",
-    price: "₪3,645",
+    price: "₪429",
   },
   {
     image: "props/a_15.jpg",
