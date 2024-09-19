@@ -131,56 +131,6 @@ const smartphones_arr = [
   },
 ];
 
-const computer_arr = [
-  {
-    image: "Computers/a_air_13.jpg",
-    logo: "Computers/logo_apple.jpg",
-    name: "MacBook",
-    type: "air 13 M2",
-    company: "Apple",
-    color: "Midnight",
-    details:
-      "Apple - MacBook Air 13.6 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Midnight",
-    price: "₪5,429",
-  },
-
-  {
-    image: "Computers/a_pro_14.jpg ",
-    logo: "Computers/logo_apple.jpg",
-    name: "MacBook",
-    type: "pro 14 M3",
-    company: "Apple",
-    color: "space gray",
-    details:
-      "Apple - MacBook Pro 14 Laptop - M3 chip Built for Apple Intelligence - 8GB Memory - 10-core GPU - 1TB SSD - Space Gray",
-    price: "₪5,429",
-  },
-
-  {
-    image: "Computers/a_pro_16.jpg ",
-    logo: "Computers/logo_apple.jpg",
-    name: "MacBook",
-    type: "pro 16 M3",
-    company: "Apple",
-    color: "Space Black",
-    details:
-      "Apple - MacBook Pro 16 Laptop - M3 Max chip Built for Apple Intelligence - 48GB Memory - 40-core GPU - 1TB SSD - Space Black",
-    price: "₪5,429",
-  },
-
-  {
-    image: "Computers/a_air_15.jpg",
-    logo: "Computers/logo_apple.jpg",
-    name: "MacBook",
-    type: "air 15 M2",
-    company: "Apple",
-    color: "Starlight",
-    details:
-      " Apple - MacBook Air 15 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Starlight",
-    price: "₪5,429",
-  },
-];
-
 const props_arr = [
   {
     image: "props/protector.jpg",
