@@ -1,3 +1,5 @@
+// import { createBox } from "./genericHtml.js";
+
 //create top line
 function createTopLine() {
   let topLine = document.getElementById("topLine");
@@ -173,6 +175,8 @@ function addToBox(_json, _id) {
   document.getElementById(_id).appendChild(mainBox);
 
   //add element to the site
+  // mainBox.innerHTML = createBox(_json);
+
   mainBox.innerHTML = `
   <div class="picBox mx-auto mt-4">
   <img class="image" src="../Images/${_json.image}" alt="${_json.name}" >
