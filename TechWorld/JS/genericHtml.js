@@ -1,5 +1,7 @@
 /**
- *build html of the top line for inner page in site
+ * build the html of top line
+ * for the inner pages in site
+ * @param {json} json
  */
 function buildTopLine() {
   return `
@@ -33,9 +35,9 @@ function buildTopLine() {
                 class="text-end sort_list"
                 style="background: white"
               >
-                <button onclick="lowToHigh(smartphones_arr,'Smartphone')">מחיר נמוך לגבוה</button>
-                <button onclick="highToLow(smartphones_arr,'Smartphone')">מחיר גבוה לנמוך</button>
-                <button onclick="popular(smartphones_arr,'Smartphone')">המוצרים הכי חמים</button>
+                <button onclick="lowToHigh(smartphones_arr, 'Smartphone')">מחיר נמוך לגבוה</button>
+                <button onclick="highToLow(smartphones_arr, 'Smartphone')">מחיר גבוה לנמוך</button>
+                <button onclick="popular(smartphones_arr, 'Smartphone')">המוצרים הכי חמים</button>
               </div>
             </div>
 
@@ -72,15 +74,21 @@ function buildTopLine() {
                         id="toPrice"
                         class="ml-5"
                         type="number"
+                        value="5429"
                         placeholder="5,429"
+                         min="389"
+                        max="5429"
                         width="20px"
                       />
 
                       <input
                         id="fromPrice"
                         type="number"
+                        value="389"
                         placeholder="389"
                         width="20px"
+                        min="389"
+                        max="5429"
                       />
                     </div>
 
@@ -127,14 +135,6 @@ function buildTopLine() {
                     style="display: none"
                     id="Company"
                   >
-                    <input type="checkbox" />
-                    Apple
-                    <br />
-                    <input type="checkbox" />
-                    Samsung
-                    <br />
-                    <input type="checkbox" />
-                    Xiaomi
                   </div>
 
                   <button class="mt-2" onclick="displayElement('listColor',4)">
@@ -150,14 +150,6 @@ function buildTopLine() {
                     id="listColor"
                     style="display: none"
                   >
-                    <input type="checkbox" />
-                    Black
-                    <br />
-                    <input type="checkbox" />
-                    White
-                    <br />
-                    <input type="checkbox" />
-                    Blue
                   </div>
                 </div>
               </div>
@@ -167,10 +159,10 @@ function buildTopLine() {
 }
 
 /**
- * build html of the box of all element in the site
- * @param {object} _json data of page
+ * build the box of all element in the site
+ * @param {json} json
  */
-function BuildBox(_json) {
+function buildBox(_json) {
   return `
   <div class="picBox mx-auto mt-4">
   <img class="image" src="../Images/${_json.image}" alt="${_json.name}" >
@@ -179,10 +171,10 @@ function BuildBox(_json) {
   <div class="middleBox pb-3 d-flex align-items-center justify-content-between ">
      <img class="logo" src="../Images/${_json.logo}" alt="${_json.company}" >
 
-     <Button class="icon_like" >
-        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-           <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-        </svg>
+     <Button class="icon_favorites" >
+      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+         <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+      </svg>
      </Button>
   </div>
      
@@ -190,7 +182,7 @@ function BuildBox(_json) {
 
    <div class="delivery d-flex align-items-center mt-3">
       <div class="icon_delivery p-1 mx-4">  
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-truck mb-2" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="fav bi bi-truck mb-2" viewBox="0 0 16 16">
              <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zM1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zM3 11a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 11a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
         </svg>
       </div>

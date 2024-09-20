@@ -54,18 +54,51 @@ function popular(json_arr, id) {
  * @param {number} id id of page
  */
 function filter(json_arr, id) {
-  let from = parsePrice(document.getElementById("fromPrice").val);
-  let to = parsePrice(document.getElementById("toPrice").val);
-
-  let temp_smartphones = JSON.parse(JSON.stringify(json_arr)); //create copy
+  let from = document.getElementById("fromPrice").value;
+  let to = document.getElementById("toPrice").value;
 
   //just element between (from , to)
-  temp_smartphones.filter((val) => {
-    console.log();
-    parsePrice(val.price) >= from && parsePrice(val.price) <= to;
+  let temp_smartphones = json_arr.filter((item) => {
+    console.log(to + "  " + from);
+    return parsePrice(item.price) >= from && parsePrice(item.price) <= to;
   });
 
   print(temp_smartphones, id); //display element
+}
+
+/**
+ * filter the element by color
+ * @param {object} json_arr data
+ * @param {string} company the company chose
+ * @param {number} id id of page for display
+ * @param {number} i position in the class
+ */
+function filterByCompany(json_arr, company, id, i) {
+  let temp_smartphones = JSON.parse(JSON.stringify(json_arr)); //create copy
+
+  checkbox = document.getElementsByClassName("checkBox")[i]; //get element
+
+  if (checkbox.checked)
+    temp_smartphones = json_arr.filter((item) => item.company === company);
+
+  print(temp_smartphones, id); //display in the page
+}
+
+/**
+ * filter the element by color
+ * @param {object} json_arr data
+ * @param {string} color the color chose
+ * @param {number} id id of page for display
+ * @param {number} i position in the class
+ */
+function filterByColor(json_arr, color, id, i) {
+  let temp_smartphones = JSON.parse(JSON.stringify(json_arr)); //create copy
+
+  checkbox = document.getElementsByClassName("checkBox")[i]; //get element
+  if (checkbox.checked)
+    temp_smartphones = json_arr.filter((item) => item.color === color);
+
+  print(temp_smartphones, id); //display in the page
 }
 
 /**
@@ -82,9 +115,5 @@ function print(json_arr, id) {
   //     addToBox(json_arr[i], id);
   //   }
 }
-
-function filterByCompany() {}
-
-function filterByColor() {}
 
 function changeView() {}
