@@ -1,18 +1,17 @@
 /**
- * create the top line in all inner page
+ * create the top line in the inner page
  */
 function createTopLine() {
   let topLine = document.getElementById("topLine");
-
-  topLine.innerHTML = buildTopLine();
+  topLine.innerHTML = buildTopLine(); //return the html  of top line
 }
 
 /**
- * of top line
- * create arrow in buttons
+ * create the button's arrow is in the top line
  * @param {string} _up id of arrow up
  * @param {string} _down id of arrow down
- * @param {number} i position in the class
+ * @param {number} i position in class
+ * @returns {void}
  */
 function createArrow(_up, _down, i) {
   //create arrow up
@@ -46,7 +45,7 @@ let flag_display = false; //not display
 /**
  * in the top line
  * in the buttons
- * create list of element down the button
+ * display list of items belongs to the button
  * @param {string} _id id of list
  * @param {number} i  position in the class
  * @returns {void}
@@ -86,9 +85,10 @@ function displayElement(_id, i) {
 }
 
 /**
- *create data into the box
- * @param {object} _json data of box
- * @param {number} _id  id of page
+ * create elements in all inner page
+ * into the box
+ * @param {object} _json data of box like the image and icon
+ * @param {number} _id id of the main box
  */
 function addToBox(_json, _id) {
   let mainBox = document.createElement("div"); //create col in row
@@ -96,5 +96,54 @@ function addToBox(_json, _id) {
   document.getElementById(_id).appendChild(mainBox);
 
   //add element to the site
-  mainBox.innerHTML = BuildBox(_json);
+  mainBox.innerHTML = buildBox(_json); //return the html of box
+
+  //create button in the box that add  elements to favorites
+  mainBox
+    .querySelector(".icon_favorites")
+    .addEventListener("click", function () {
+      favorites(_json, this);
+    });
 }
+
+let favorites_arr = JSON.parse(localStorage.getItem("favorites_arr")) || [];
+/**
+ * add to favorites
+ * @param {object} product the product favorite
+ * @param {*} buttonElement
+ */
+function favorites(product, buttonElement) {
+  //if the product already exist
+  let exists = favorites_arr.some(
+    (item) => item.name === product.name && item.type === product.type
+  );
+
+  if (!exists) {
+    //add to favorites
+    favorites_arr.push(product);
+    alert("המוצר נוסף לרשימת הפריטים האהובים!");
+    buttonElement.style.color = "red";
+  } else {
+    // remove from favorites
+    favorites_arr = favorites_arr.filter(
+      (favorites_arr) => favorites_arr.type !== product.type
+    );
+
+    alert("המוצר הוסר מרשימת הפריטים האהובים!");
+    buttonElement.style.color = "black";
+  }
+
+  localStorage.setItem("likedItems", JSON.stringify(favorites_arr));
+  console.log("רשימת הפריטים האהובים כרגע:", favorites_arr);
+}
+
+// function saveFavoriteInOnload() {
+//   console.log("hello");
+//   let i = 0;
+//   smartphones_arr.forEach((item) => {
+//     if (favorites_arr.includes(item)) {
+//       document.getElementsByClassName("fav")[0].style.color = red;
+//     }
+//     i++;
+//   });
+// }
