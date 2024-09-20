@@ -133,7 +133,7 @@ const smartphones_arr = [
 
 const props_arr = [
   {
-    image: "props/AirPods Max.jpg",
+    image: "props/AirPodsMax.jpg",
     logo: "props/",
     name: "AirPods ",
     type: "AirPods Max",
@@ -143,7 +143,7 @@ const props_arr = [
     price: "₪2,500",
   },
   {
-    image: "props/QuietComfort.jpg",
+    image: "props/sony2.jpg",
     logo: "props/",
     name: "QuietComfort",
     type: "QuietComfort",
@@ -154,7 +154,7 @@ const props_arr = [
     price: "₪899",
   },
   {
-    image: "props/WH1000XM4.jpg",
+    image: "props/sony1.jpg",
     logo: "props/",
     name: "",
     type: "WH1000XM4",
@@ -165,7 +165,7 @@ const props_arr = [
     price: "₪1199",
   },
   {
-    image: "props/AirPods Pro 2.jpg",
+    image: "props/AirPodsPro2.jpg",
     logo: "props/",
     name: "",
     type: "",
@@ -175,7 +175,7 @@ const props_arr = [
     price: "₪1100",
   },
   {
-    image: "props/MX Master 3S",
+    image: "props/mouse1.jpg",
     logo: "props/",
     name: "",
     type: "MX Master 3S",
@@ -186,7 +186,7 @@ const props_arr = [
     price: "₪169",
   },
   {
-    image: "props/Magic Mouse",
+    image: "props/mouse2.jpg",
     logo: "props/",
     name: "",
     type: "",
@@ -196,7 +196,7 @@ const props_arr = [
     price: "₪299",
   },
   {
-    image: "props/Basilisk V3 X",
+    image: "props/mouse3.jpg",
     logo: "props/",
     name: "",
     type: "",
@@ -207,7 +207,7 @@ const props_arr = [
     price: "₪120",
   },
   {
-    image: "props/MX Keys S",
+    image: "props/keyboard3.jpg",
     logo: "props/",
     name: "",
     type: " MX Keys S",
@@ -218,7 +218,7 @@ const props_arr = [
     price: "₪199",
   },
   {
-    image: "props/MX Mechanical",
+    image: "props/Keyboard2.jpg",
     logo: "props/",
     name: "",
     type: "MX Mechanical",
@@ -229,7 +229,7 @@ const props_arr = [
     price: "₪239",
   },
   {
-    image: "props/Magic Keyboard",
+    image: "props/Keyboard1.jpg",
     logo: "props/",
     name: "",
     type: "Magic Keyboard",
@@ -240,7 +240,7 @@ const props_arr = [
     price: "₪369",
   },
   {
-    image: "props/Wireless Charging Pad",
+    image: "props/WirelessChargingPad.jpg",
     logo: "props/",
     name: "",
     type: "Wireless Charging Pad",
@@ -251,7 +251,7 @@ const props_arr = [
     price: "₪350",
   },
   {
-    image: "props/Apple_Power_Adapter",
+    image: "props/Apple_Power_Adapter.jpg",
     logo: "props/",
     name: "",
     type: "12W USB ",
@@ -261,7 +261,7 @@ const props_arr = [
     price: "₪94",
   },
   {
-    image: "props/Anker - 735 65W",
+    image: "props/Anker735.jpg",
     logo: "props/",
     name: "",
     type: "735 65W ",
@@ -272,7 +272,7 @@ const props_arr = [
     price: "₪125",
   },
   {
-    image: "props/-Lightning Charging Cable",
+    image: "props/Cable.jpg",
     logo: "props/",
     name: "",
     type: "-Lightning Charging Cable ",
