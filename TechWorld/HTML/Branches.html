@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Branches</title>
-    <link rel="stylesheet" href="../CSS/Branches.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רשימת סניפים ושעות פעילות</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/Branches.css">
   </head>
   <body>
-    <h1>עמוד של סניפים של החנות</h1>
+    <header>
+      <h1>רשימת סניפים ושעות פעילות</h1>
+    </header>
+   
+
+    <div class="search-container">
+      <input type="text" id="branch-search" placeholder="חיפוש סניף..." onkeyup="filterBranches()">
+  </div>
+  
+  <div id="branches-container">
+      
+  </div>
 
     <script src="../JS/Branches.js"></script>
   </body>
