@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../CSS/data.css" />
   </head>
   <body>
+     <!-- Navbar and logo section will be dynamically loaded here -->
+     <div id="navbar-placeholder"></div>
     <div class="container-fluid">
       <div class="container">
         <!-- top line -->
@@ -24,7 +26,14 @@
         </div>
       </div>
     </div>
-
+    <script>
+      // JavaScript to load the navbar from an external file
+      fetch('navbar.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
     <script src="../JS/Smartphones.js"></script>
     <script src="../JS/data.js"></script>
     <script src="../JS/funcData.js"></script>
