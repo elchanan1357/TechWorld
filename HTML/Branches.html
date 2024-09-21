@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="../CSS/Branches.css" />
   </head>
   <body>
+    <!-- Navbar and logo section will be dynamically loaded here -->
+    <div id="navbar-placeholder"></div>
     <h1>עמוד של סניפים של החנות</h1>
 
+    <script>
+      // JavaScript to load the navbar from an external file
+      fetch('navbar.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
     <script src="../JS/Branches.js"></script>
   </body>
 </html>

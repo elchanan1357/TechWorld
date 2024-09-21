@@ -1,13 +1,11 @@
+/* Body settings */
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background-color: #ececec;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Center the login form */
 .login {
   background-color: #fff;
   padding: 2rem;
@@ -16,6 +14,7 @@ body {
   width: 100%;
   max-width: 400px;
   text-align: center;
+  margin: 100px auto;
 }
 
 h1 {

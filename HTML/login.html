@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../CSS/login.css" />
   </head>
   <body>
+    <!-- Navbar and logo section will be dynamically loaded here -->
+    <div id="navbar-placeholder"></div>
     <div class="login">
       <div class="login-form">
         <br /><br /><br /><br />
@@ -15,11 +17,7 @@
         <br />
         <div>First Name</div>
         <br />
-        <input
-          id="fn"
-          type="text"
-          placeholder="Enter your first name here..."
-        />
+        <input id="fn" type="text" placeholder="Enter your first name here..." />
         <br />
         <br />
         <div>Last Name</div>
@@ -34,20 +32,12 @@
         <br />
         <div>Password</div>
         <br />
-        <input
-          id="pw"
-          type="text"
-          placeholder="Enter your password here..."
-        /><br />
+        <input id="pw" type="text" placeholder="Enter your password here..." /><br />
         <br />
 
         <div>Password Verify</div>
         <br />
-        <input
-          id="pw2"
-          type="text"
-          placeholder="Enter your password again..."
-        /><br />
+        <input id="pw2" type="text" placeholder="Enter your password again..." /><br />
         <br />
         <br />
         <button id="submit" onclick="submit()">Submit</button>
@@ -55,6 +45,15 @@
     </div>
     <br />
     <br />
+
+    <script>
+      // JavaScript to load the navbar from an external file
+      fetch('navbar.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
     <script src="../JS/login.js"></script>
   </body>
 </html>
