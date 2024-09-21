@@ -7,17 +7,17 @@ const linkConfigs = [
 ];
 let currentIndex = 0;
 
-// function replaceLink() {
-//   const link = document.getElementById('dynamicLink');
-//   const img = document.getElementById('dynamicImage');
+function replaceLink() {
+  const link = document.getElementById('dynamicLink');
+  const img = document.getElementById('dynamicImage');
 
-//   currentIndex = (currentIndex + 1) % linkConfigs.length; // Cycle through the links
-//   link.href = linkConfigs[currentIndex].href;
-//   img.src = linkConfigs[currentIndex].img;
-// }
+  currentIndex = (currentIndex + 1) % linkConfigs.length; // Cycle through the links
+  link.href = linkConfigs[currentIndex].href;
+  img.src = linkConfigs[currentIndex].img;
+}
 
-// // Change link every 2.5 seconds
-// setInterval(replaceLink, 2500);
+// Change link every 2.5 seconds
+setInterval(replaceLink, 2500);
 
 // Function to get random items from a category array
 function getRandomProducts(categoryArray, numberOfItems) {
