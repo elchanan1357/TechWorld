@@ -1,4 +1,4 @@
-/* Parent div that wraps the logo and navbar */
+
 .navbar-wrapper {
   position: fixed;
   top: 0;
@@ -6,14 +6,14 @@
   z-index: 1050;
 }
 
-/* Logo section (blue background) */
+
 .logo-section {
   background-color: lightblue;
   text-align: center;
   padding: 2px 0;
 }
 
-/* Body margin to prevent content overlap with the navbar */
+
 body {
   margin-top: 180px; /* Adjust according to the total height of the logo + navbar */
 }

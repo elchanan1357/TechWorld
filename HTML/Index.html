@@ -11,12 +11,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="stylesheet" href="../CSS/data.css" />
   </head>
   <body>
     <!-- Navbar and logo section will be dynamically loaded here -->
     <div id="navbar-placeholder"></div>
 
-    
+    <!--     
     <div class="main">
       <div class="container">
         <div class="row add">
@@ -72,6 +73,29 @@
           </a>
         </div>
       </div>
+    </div> -->
+
+    <!-- Sections for random products from each category -->
+    <div class="container mt-4">
+      <!-- Smartphones Section -->
+      <h2>Smartphones</h2>
+      <hr />
+      <div id="Smartphones" class="row mb-5"></div>
+
+      <!-- Tablets Section -->
+      <h2>Tablets</h2>
+      <hr />
+      <div id="Tablets" class="row mb-5"></div>
+
+      <!-- Computers Section -->
+      <h2>Computers</h2>
+      <hr />
+      <div id="Computers" class="row mb-5"></div>
+
+      <!-- Props Section -->
+      <h2>Props</h2>
+      <hr />
+      <div id="Props" class="row mb-5"></div>
     </div>
 
     <script>
@@ -83,5 +107,10 @@
         });
     </script>
     <script src="../JS/index.js"></script>
+    <script src="../JS/data.js"></script>
+    <script src="../JS/funcData.js"></script>
+  
+    <script src="../JS/genericHtml.js"></script>
+    <script src="../JS/homepage.js"></script>
   </body>
 </html>
