@@ -157,7 +157,7 @@ function buildTopLine() {
 
 /**
  * build the box of all element in the site
- * @param {json} json
+ * @param {object} json
  */
 function buildBox(_json) {
   return `
