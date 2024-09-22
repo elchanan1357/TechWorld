@@ -283,7 +283,149 @@ const props_arr = [
   },
 ];
 
-const tablets_arr = [];
+const tablets_arr = [
+  {
+    id: "20013",
+    image: "Tablets/a_pro_m4.jpg",
+    logo: "logo/logo_apple.jpg",
+    name: "iPad",
+    type: "13-inch iPad Pro M4",
+    company: "Apple",
+    color: "Space Black",
+    details:
+      "Apple - 13-inch iPad Pro M4 chip Built for Apple Intelligence Wi-Fi 512GB with OLED - Space Black",
+    price: "₪5,429",
+  },
+  {
+    id: "20014",
+    image: "Tablets/a_11_air.jpg",
+    logo: "logo/logo_apple.jpg",
+    name: "iPad ",
+    type: "11-inch iPad Air M2",
+    company: "Apple",
+    color: "Starlight",
+    details:
+      "Apple - 11-inch iPad Air M2 chip Built for Apple Intelligence Wi-Fi 128GB - Starlight",
+    price: "₪3,100",
+  },
+  {
+    id: "20015",
+    image: "Tablets/a_13__air.jpg",
+    logo: "logo/logo_apple.jpg",
+    name: "iPad",
+    type: "13-inch iPad Air M2",
+    company: "Apple",
+    color: "Blue",
+    details:
+      "Apple - 13-inch iPad Air M2 chip Built for Apple Intelligence Wi-Fi 128GB - Blue",
+    price: "₪2,899",
+  },
+  {
+    id: "20016",
+    image: "Tablets/a_10.9.jpg",
+    logo: "logo/logo_apple.jpg",
+    name: "iPad",
+    type: "10.9-Inch iPad",
+    company: "Apple",
+    color: "Silver",
+    details:
+      "Apple - 10.9-Inch iPad - Latest Model - (10th Generation) with Wi-Fi - 64GB - Silver",
+    price: "₪2,699",
+  },
+  {
+    id: "20017",
+    image: "Tablets/GalaxyTabS9.jpg",
+    logo: "logo/logo_Samsung.jpg",
+    name: "",
+    type: "Galaxy Tab S9",
+    company: "Samsung",
+    color: "Black",
+    details:
+      "Samsung Galaxy Tab S9 Octa Core 3.2GHz 8GB+128GB 11'' Wi-Fi- Graphite (SM-X710) - 1 Year Warranty by the Official Distributor",
+    price: "₪3,089",
+  },
+  {
+    id: "20018",
+    image: "Tablets/GalaxyTabS9Ultra.jpg",
+    logo: "logo/logo_Samsung.jpg",
+    name: "",
+    type: "Galaxy Tab S9 Ultra",
+    company: "Samsung",
+    color: "Black",
+    details:
+      "Samsung Galaxy Tab S9 Ultra Octa Core 3.2GHz 12GB+256GB 14.6'' 5G - Beige (SM-X916) - 1 Year Warranty by the Official ",
+    price: "₪4,429",
+  },
+  {
+    id: "20019",
+    image: "Tablets/GalaxyTabS6Lite.jpg",
+    logo: "logo/logo_Samsung.jpg",
+    name: "",
+    type: " Galaxy Tab S6 Lite",
+    company: "Apple",
+    color: "Gray",
+    details:
+      "Samsung Galaxy Tab S6 Lite 128GB SM-P620 - WiFi - Gray - 1 Year Warranty",
+    price: "₪1,599",
+  },
+  {
+    id: "20020",
+    image: "Tablets/GalaxyTabA9+.jpg",
+    logo: "logo/logo_Samsung.jpg",
+    name: "",
+    type: "Galaxy Tab A9+",
+    company: "Apple",
+    color: "Gray",
+    details:
+      "Samsung Galaxy Tab A9+ Octa Core 2.2GHz 8GB+128GB 11'' 5G Gray (SM-X216) 1 Year Official",
+    price: "₪1,999",
+  },
+  {
+    id: "20021",
+    image: "Tablets/LenovoP12.jpg",
+    logo: "logo/logo_lenovo.jpg",
+    name: "",
+    type: "Lenovo TAB P12 ",
+    company: "Lenovo",
+    color: "Silver",
+    details:
+      "Lenovo TAB P12 TB370FU MediaTek Dimensity 256GB ZACH0198IL -Silver",
+    price: "₪1,899",
+  },
+  {
+    id: "20022",
+    image: "Tablets/LenovoTabP11.jpg",
+    logo: "logo/logo_lenovo.jpg",
+    name: "",
+    type: "Lenovo Tab P11 2nd Gen ",
+    company: "Lenovo",
+    color: "Silver",
+    details: "Lenovo Tab P11 2nd Gen TB350XU 128GB 4G ZABG0039IL -Silver",
+    price: "₪2,100",
+  },
+  {
+    id: "20023",
+    image: "Tablets/LenovoYogaTAB11.jpg",
+    logo: "logo/logo_lenovo.jpg",
+    name: "",
+    type: "Lenovo Yoga TAB 11",
+    company: "Lenovo",
+    color: "Silver",
+    details: "Lenovo Yoga TAB 11 YT-J706F 256GB ZA8W0058IL Silver - WiFi",
+    price: "₪1,799",
+  },
+  {
+    id: "20024",
+    image: "Tablets/LenovoTABPlus.jpg",
+    logo: "logo/logo_lenovo.jpg",
+    name: "",
+    type: "Lenovo TAB Plus",
+    company: "Lenovo",
+    color: "Silver",
+    details: "Lenovo TAB Plus TB351FU 256GB WiFi ZADX0104IL - Silver",
+    price: "₪1,799",
+  },
+];
 
 const computers_arr = [
   {
