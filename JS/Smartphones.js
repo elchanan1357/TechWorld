@@ -8,7 +8,7 @@ window.onload = function () {
 
   for (let i = 0; i < 5; i++) createArrow("arrow_up", "arrow_down", i);
 
-  // saveFavoriteInOnload();
+  saveFavoriteInOnload();
 };
 
 /**
