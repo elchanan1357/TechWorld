@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites</title>
+    <link rel="stylesheet" href="../CSS/favorites.css" />
+  </head>
+  <body>
+    <!-- Navbar and logo section will be dynamically loaded here -->
+    <div id="navbar-placeholder"></div>
+    <div id="favoriteItems"></div>
+
+    <script>
+      // JavaScript to load the navbar from an external file
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="../JS/favorite.js"></script>
+  </body>
+</html>

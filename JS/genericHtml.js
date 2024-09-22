@@ -35,9 +35,7 @@ function buildTopLine() {
                 class="text-end sort_list"
                 style="background: white"
               >
-                <button onclick="lowToHigh(smartphones_arr, 'Smartphone')">מחיר נמוך לגבוה</button>
-                <button onclick="highToLow(smartphones_arr, 'Smartphone')">מחיר גבוה לנמוך</button>
-                <button onclick="popular(smartphones_arr, 'Smartphone')">המוצרים הכי חמים</button>
+
               </div>
             </div>
 
@@ -181,12 +179,12 @@ function buildBox(_json) {
   <p class="col-md-10 m-1 mt-0">${_json.details}</p>
 
    <div class="delivery d-flex align-items-center mt-3">
-      <div class="icon_delivery p-1 mx-4">  
+      <div class="icon_delivery p-1 mx-2">  
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-truck mb-2" viewBox="0 0 16 16">
              <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zM1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zM3 11a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 11a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
         </svg>
       </div>
-         <span>משלוח חינם לבית/נקודת איסוף</span>        
+         <span id="delivery_text" class="mx-4">Free delivery to your home or to a collection point</span>        
   </div>
 
   <div class="bottomBox  mt-4 d-flex align-items-center justify-content-between" padding: 10px;">

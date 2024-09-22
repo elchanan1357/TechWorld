@@ -146,6 +146,10 @@ p {
   background-color: green;
 }
 
+.mainBox .delivery #delivery_text {
+  max-width: 65%;
+}
+
 .mainBox .bottomBox {
   display: flex; /* same row */
   min-height: 50px;

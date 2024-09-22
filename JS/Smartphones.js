@@ -3,13 +3,25 @@ window.onload = function () {
   createTopLine(); //create the top line
   print(smartphones_arr, "Smartphone"); //create element in page
 
+  //create list of sort
+  document.getElementById("sortList").innerHTML = listOfSort();
+
+  //create list of filtering
   document.getElementById("listColor").innerHTML = listOfColor();
   document.getElementById("listCompany").innerHTML = listOfCompany();
 
   for (let i = 0; i < 5; i++) createArrow("arrow_up", "arrow_down", i);
-
-  saveFavoriteInOnload();
 };
+
+/**
+ * top line in button sort
+ * create list of options
+ */
+function listOfSort() {
+  return `<button onclick="lowToHigh(smartphones_arr, 'Smartphone')">Price: Lowest To Highest</button>
+          <button onclick="highToLow(smartphones_arr, 'Smartphone')">Price: Highest To Lowest</button>
+          <button onclick="popular(smartphones_arr, 'Smartphone')">Popularity</button>`;
+}
 
 /**
  * top line in button company

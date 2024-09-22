@@ -7,20 +7,22 @@ function parsePrice(price) {
   return parseFloat(price.replace(/[₪,]/g, "")); //remove tags
 }
 
+let sort_arr = []; //for all type of sort
 /**
  * sort element by price low to high
  * @param {object} json_arr data of page
  * @param {number} id id of page
  */
 function lowToHigh(json_arr, id) {
-  let temp_smartphones = JSON.parse(JSON.stringify(json_arr)); //create copy
+  //if arr was not filtered
+  if (sort_arr.length === 0) sort_arr = JSON.parse(JSON.stringify(json_arr)); //create copy
 
-  temp_smartphones.sort(
+  sort_arr.sort(
     //sort element
     (item1, item2) => parsePrice(item1.price) - parsePrice(item2.price)
   );
 
-  print(temp_smartphones, id); //display element
+  print(sort_arr, id); //display element
 }
 
 /**
@@ -29,14 +31,15 @@ function lowToHigh(json_arr, id) {
  * @param {number} id id of page
  */
 function highToLow(json_arr, id) {
-  let temp_smartphones = JSON.parse(JSON.stringify(json_arr)); //create copy
+  //if arr was not filtered
+  if (sort_arr.length === 0) sort_arr = JSON.parse(JSON.stringify(json_arr)); //create copy
 
-  temp_smartphones.sort(
+  sort_arr.sort(
     //sort element
     (item1, item2) => parsePrice(item2.price) - parsePrice(item1.price)
   );
 
-  print(temp_smartphones, id); //display element
+  print(sort_arr, id); //display element
 }
 
 /**
@@ -45,7 +48,12 @@ function highToLow(json_arr, id) {
  * @param {number} id id of page
  */
 function popular(json_arr, id) {
-  print(json_arr, id); //display element
+  //if arr was not filtered
+  if (sort_arr.length === 0) sort_arr = JSON.parse(JSON.stringify(json_arr)); //create copy
+
+  sort_arr.sort(() => 0.5 - Math.random());
+
+  print(sort_arr, id); //display element
 }
 
 /**
@@ -58,12 +66,13 @@ function filter(json_arr, id) {
   let to = document.getElementById("toPrice").value;
 
   //just element between (from , to)
-  let temp_smartphones = json_arr.filter((item) => {
+  let temp_arr = json_arr.filter((item) => {
     console.log(to + "  " + from);
     return parsePrice(item.price) >= from && parsePrice(item.price) <= to;
   });
 
-  print(temp_smartphones, id); //display element
+  print(temp_arr, id); //display element
+  sort_arr = temp_arr;
 }
 
 /**
@@ -74,14 +83,15 @@ function filter(json_arr, id) {
  * @param {number} i position in the class
  */
 function filterByCompany(json_arr, company, id, i) {
-  let temp_smartphones = JSON.parse(JSON.stringify(json_arr)); //create copy
+  let temp_arr = JSON.parse(JSON.stringify(json_arr)); //create copy
 
   checkbox = document.getElementsByClassName("checkBox")[i]; //get element
 
   if (checkbox.checked)
-    temp_smartphones = json_arr.filter((item) => item.company === company);
+    temp_arr = json_arr.filter((item) => item.company === company);
 
-  print(temp_smartphones, id); //display in the page
+  print(temp_arr, id); //display in the page
+  sort_arr = temp_arr;
 }
 
 /**
@@ -92,13 +102,14 @@ function filterByCompany(json_arr, company, id, i) {
  * @param {number} i position in the class
  */
 function filterByColor(json_arr, color, id, i) {
-  let temp_smartphones = JSON.parse(JSON.stringify(json_arr)); //create copy
+  let temp_arr = JSON.parse(JSON.stringify(json_arr)); //create copy
 
   checkbox = document.getElementsByClassName("checkBox")[i]; //get element
   if (checkbox.checked)
-    temp_smartphones = json_arr.filter((item) => item.color === color);
+    temp_arr = json_arr.filter((item) => item.color === color);
 
-  print(temp_smartphones, id); //display in the page
+  print(temp_arr, id); //display in the page
+  sort_arr = temp_arr;
 }
 
 /**
@@ -109,6 +120,8 @@ function filterByColor(json_arr, color, id, i) {
 function print(json_arr, id) {
   document.getElementById(id).innerHTML = ""; //clean the old element
   json_arr.forEach((val) => addToBox(val, id));
+
+  saveFavoritesInPrint();
 
   //   for (let i = 0; i < json_arr.length; i++) {
   //     if (i == 4) addBanaras(id);
