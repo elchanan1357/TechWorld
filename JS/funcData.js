@@ -140,7 +140,7 @@ function favorites(product, buttonElement) {
 /**
  * save the color of favorites icon
  */
-function saveFavoriteInOnload() {
+function saveFavoritesInPrint() {
   let favoriteMap = {}; //create map off favorite item
 
   favorites_arr.forEach((favorite) => {

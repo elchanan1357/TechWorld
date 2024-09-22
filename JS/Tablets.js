@@ -4,13 +4,25 @@ window.onload = function () {
 
   print(tablets_arr, "Tablets"); //create element in page
 
+  //create list of sort
+  document.getElementById("sortList").innerHTML = listOfSort();
+
+  //create list of filtering
   document.getElementById("listColor").innerHTML = listOfColor();
   document.getElementById("listCompany").innerHTML = listOfCompany();
 
   for (let i = 0; i < 5; i++) createArrow("arrow_up", "arrow_down", i);
-
-  // saveFavoriteInOnload();
 };
+
+/**
+ * top line in button sort
+ * create list of options
+ */
+function listOfSort() {
+  return `<button onclick="lowToHigh(tablets_arr, 'Tablets')">Price: Lowest To Highest</button>
+          <button onclick="highToLow(tablets_arr, 'Tablets')">Price: Highest To Lowest</button>
+          <button onclick="popular(tablets_arr, 'Tablets')">Popularity</button>`;
+}
 
 /**
  * top line in button company

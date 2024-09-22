@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.favorite-item {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.favorite-item img {
+  margin-left: 15px;
+}
+.item-details {
+  flex-grow: 1;
+}
+.cartButton {
+  background: yellow;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  margin-right: 10px;
+}

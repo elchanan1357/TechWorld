@@ -437,7 +437,7 @@ const computers_arr = [
     color: "Midnight",
     details:
       "Apple - MacBook Air 13.6 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Midnight",
-    price: "₪5,429",
+    price: "₪429",
   },
 
   {
@@ -449,7 +449,7 @@ const computers_arr = [
     color: "space gray",
     details:
       "Apple - MacBook Pro 14 Laptop - M3 chip Built for Apple Intelligence - 8GB Memory - 10-core GPU - 1TB SSD - Space Gray",
-    price: "₪5,429",
+    price: "₪429",
   },
 
   {
@@ -461,7 +461,7 @@ const computers_arr = [
     color: "Space Black",
     details:
       "Apple - MacBook Pro 16 Laptop - M3 Max chip Built for Apple Intelligence - 48GB Memory - 40-core GPU - 1TB SSD - Space Black",
-    price: "₪5,429",
+    price: "₪429",
   },
 
   {
