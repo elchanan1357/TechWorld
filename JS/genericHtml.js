@@ -111,8 +111,7 @@ function buildTopLine() {
                       />
                     </div>
 
-                    <div class="filter-in">
-                      <button onclick="filter(smartphones_arr,'Smartphone')" class="mt-2">Filter</button>
+                    <div id="filterIn" class="filter-in">
                     </div>
                   </div>
 

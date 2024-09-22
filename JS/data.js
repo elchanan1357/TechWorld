@@ -134,7 +134,7 @@ const smartphones_arr = [
 const props_arr = [
   {
     image: "props/AirPodsMax.jpg",
-    logo: "logo/",
+    logo: "logo/logo_apple.jpg",
     name: "AirPods ",
     type: "AirPods Max",
     company: "Apple",
@@ -144,7 +144,7 @@ const props_arr = [
   },
   {
     image: "props/sony2.jpg",
-    logo: "logo/",
+    logo: "logo/bose.jpg",
     name: "QuietComfort",
     type: "QuietComfort",
     company: "Bose",
@@ -155,7 +155,7 @@ const props_arr = [
   },
   {
     image: "props/sony1.jpg",
-    logo: "logo/",
+    logo: "logo/sony.jpg",
     name: "",
     type: "WH1000XM4",
     company: "Sony",
@@ -166,7 +166,7 @@ const props_arr = [
   },
   {
     image: "props/AirPodsPro2.jpg",
-    logo: "logo/",
+    logo: "logo/logo_apple.jpg",
     name: "",
     type: "",
     company: "Apple",
@@ -176,7 +176,7 @@ const props_arr = [
   },
   {
     image: "props/mouse1.jpg",
-    logo: "logo/",
+    logo: "logo/logo_logitech.jpg",
     name: "",
     type: "MX Master 3S",
     company: "Logitech",
@@ -187,7 +187,7 @@ const props_arr = [
   },
   {
     image: "props/mouse2.jpg",
-    logo: "logo/",
+    logo: "logo/logo_apple.jpg",
     name: "",
     type: "",
     company: "Apple",
@@ -208,7 +208,7 @@ const props_arr = [
   },
   {
     image: "props/keyboard3.jpg",
-    logo: "logo/",
+    logo: "logo/logo_logitech.jpg",
     name: "",
     type: " MX Keys S",
     company: "Logitech",
@@ -219,7 +219,7 @@ const props_arr = [
   },
   {
     image: "props/Keyboard2.jpg",
-    logo: "logo/",
+    logo: "logo/logo_logitech.jpg",
     name: "",
     type: "MX Mechanical",
     company: "Logitech",
@@ -230,11 +230,11 @@ const props_arr = [
   },
   {
     image: "props/Keyboard1.jpg",
-    logo: "logo/",
+    logo: "logo/logo_apple.jpg",
     name: "",
     type: "Magic Keyboard",
     company: "Apple",
-    color: "Silver/White",
+    color: "Silver",
     details:
       "Apple - Magic Keyboard full size with Numeric Keypad - Silver/White",
     price: "₪369",
@@ -252,7 +252,7 @@ const props_arr = [
   },
   {
     image: "props/Apple_Power_Adapter.jpg",
-    logo: "logo/",
+    logo: "logo/logo_apple.jpg",
     name: "",
     type: "12W USB ",
     company: "Apple",
@@ -273,7 +273,7 @@ const props_arr = [
   },
   {
     image: "props/Cable.jpg",
-    logo: "logo/",
+    logo: "logo/logo_apple.jpg",
     name: "",
     type: "-Lightning Charging Cable ",
     company: "Apple",
