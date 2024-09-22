@@ -7,6 +7,8 @@ window.onload = function () {
   document.getElementById("sortList").innerHTML = listOfSort();
 
   //create list of filtering
+  document.getElementById("filterIn").innerHTML = `
+  <button onclick="filter(computers_arr,'Computer')" class="mt-2">Filter</button>`;
   document.getElementById("listColor").innerHTML = listOfColor();
   document.getElementById("listCompany").innerHTML = listOfCompany();
 

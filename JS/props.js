@@ -7,6 +7,8 @@ window.onload = function () {
   document.getElementById("sortList").innerHTML = listOfSort();
 
   //create list of filtering
+  document.getElementById("filterIn").innerHTML = `
+  <button onclick="filter(props_arr,'Props')" class="mt-2">Filter</button>`;
   document.getElementById("listColor").innerHTML = listOfColor();
   document.getElementById("listCompany").innerHTML = listOfCompany();
 
@@ -31,11 +33,14 @@ function listOfCompany() {
   return `    <input onchange="filterByCompany(props_arr,'Apple','Props',0)" class="checkBox" type="checkbox" />
                       Apple
                       <br />
-                      <input onchange="filterByCompany(props_arr,'Samsung','Props',1)" class="checkBox" type="checkbox" />
-                      Samsung
+                      <input onchange="filterByCompany(props_arr,'Bose','Props',1)" class="checkBox" type="checkbox" />
+                      Bose
                       <br />
-                      <input onchange="filterByCompany(props_arr,'Xiaomi','Props',2)" class="checkBox" type="checkbox" />
-                      Xiaomi`;
+                      <input onchange="filterByCompany(props_arr,'Sony','Props',2)" class="checkBox" type="checkbox" />
+                      Sony
+                      <br />
+                      <input onchange="filterByCompany(props_arr,'Logitech','Props',2)" class="checkBox" type="checkbox" />
+                      Logitech`;
 }
 
 /**
