@@ -133,17 +133,30 @@ function favorites(product, buttonElement) {
     buttonElement.style.color = "black";
   }
 
-  localStorage.setItem("likedItems", JSON.stringify(favorites_arr));
+  localStorage.setItem("favorites_arr", JSON.stringify(favorites_arr));
   console.log("רשימת הפריטים האהובים כרגע:", favorites_arr);
 }
 
-// function saveFavoriteInOnload() {
-//   console.log("hello");
-//   let i = 0;
-//   smartphones_arr.forEach((item) => {
-//     if (favorites_arr.includes(item)) {
-//       document.getElementsByClassName("fav")[0].style.color = red;
-//     }
-//     i++;
-//   });
-// }
+/**
+ * save the color of favorites icon
+ */
+function saveFavoriteInOnload() {
+  let favoriteMap = {}; //create map off favorite item
+
+  favorites_arr.forEach((favorite) => {
+    //init items in map
+    favoriteMap[favorite.details] = true;
+  });
+
+  let productElements = document.querySelectorAll(".mainBox"); //get all element in page
+
+  productElements.forEach((element) => {
+    let productName = element.querySelector("p").innerText;
+
+    //check if item exist in the map
+    if (favoriteMap[productName]) {
+      let favoriteButton = element.querySelector(".icon_favorites");
+      favoriteButton.style.color = "red";
+    }
+  });
+}
