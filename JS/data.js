@@ -287,7 +287,7 @@ const props_arr = [
   {
     id: "30037",
     image: "props/Anker735.jpg",
-    logo: "logo/",
+    logo: "logo/logo_ancer.jpg",
     name: "",
     type: "735 65W ",
     company: "Anker",
