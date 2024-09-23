@@ -1,4 +1,4 @@
-let complexArray = [{ firstName: '', lastName: '', email: '', password: '' }];
+let complexArray = [];
 function submit() {
   firstName = document.getElementById('fn').value;
   lastName = document.getElementById('ln').value;
