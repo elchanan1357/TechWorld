@@ -104,6 +104,11 @@ function addToBox(_json, _id) {
     .addEventListener("click", function () {
       favorites(_json, this);
     });
+
+  //create button in the box that add  elements to cart
+  mainBox.querySelector(".cartButton").addEventListener("click", function () {
+    addToCart(_json);
+  });
 }
 
 let favorites_arr = JSON.parse(localStorage.getItem("favorites_arr")) || [];
@@ -114,27 +119,24 @@ let favorites_arr = JSON.parse(localStorage.getItem("favorites_arr")) || [];
  */
 function favorites(product, buttonElement) {
   //if the product already exist
-  let exists = favorites_arr.some(
-    (item) => item.name === product.name && item.type === product.type
-  );
+  let exists = favorites_arr.some((item) => item.id === product.id);
 
   if (!exists) {
     //add to favorites
     favorites_arr.push(product);
-    alert("המוצר נוסף לרשימת הפריטים האהובים!");
+    alert("Add to favorites successfully");
     buttonElement.style.color = "red";
   } else {
     // remove from favorites
     favorites_arr = favorites_arr.filter(
-      (favorites_arr) => favorites_arr.type !== product.type
+      (favorites_arr) => favorites_arr.id !== product.id
     );
 
-    alert("המוצר הוסר מרשימת הפריטים האהובים!");
+    alert("remove from favorites successfully");
     buttonElement.style.color = "black";
   }
 
   localStorage.setItem("favorites_arr", JSON.stringify(favorites_arr));
-  console.log("רשימת הפריטים האהובים כרגע:", favorites_arr);
 }
 
 /**
@@ -159,4 +161,25 @@ function saveFavoritesInPrint() {
       favoriteButton.style.color = "red";
     }
   });
+}
+
+let cart_arr = JSON.parse(localStorage.getItem("cart_arr")) || [];
+/**
+ * add to favorites
+ * @param {object} product the product favorite
+ * @param {*} buttonElement
+ */
+function addToCart(product) {
+  //if the product already exist
+  let exists = favorites_arr.some((item) => item.id === product.id);
+
+  if (!exists) {
+    //add to favorites
+    cart_arr.push(product);
+    alert("Add to cart successfully");
+  } else {
+    alert("The item in cart  Are you sure you want to add?");
+  }
+
+  localStorage.setItem("cart_arr", JSON.stringify(cart_arr));
 }

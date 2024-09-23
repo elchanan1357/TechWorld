@@ -1,6 +1,7 @@
 //all type of smartphone in the store
 const smartphones_arr = [
   {
+    id: "40047",
     image: "Smartphone/s_a35.jpg",
     logo: "logo/logo_Samsung.jpg",
     name: "Galaxy",
@@ -12,6 +13,7 @@ const smartphones_arr = [
     price: "₪3,645",
   },
   {
+    id: "40048",
     image: "Smartphone/a_15.jpg",
     logo: "logo/logo_apple.jpg",
     name: "iPhone",
@@ -23,6 +25,7 @@ const smartphones_arr = [
     price: "₪4,949",
   },
   {
+    id: "40049",
     image: "Smartphone/x_a3.jpg",
     logo: "logo/logo_Xiaomi.jpg",
     name: "Redmi",
@@ -34,6 +37,7 @@ const smartphones_arr = [
     price: "₪389",
   },
   {
+    id: "40050",
     image: "Smartphone/s_s21_fe.jpg",
     logo: "logo/logo_Samsung.jpg",
     name: "Galaxy",
@@ -45,6 +49,7 @@ const smartphones_arr = [
     price: "₪1,490",
   },
   {
+    id: "40051",
     image: "Smartphone/a_15_pro _max.jpg",
     logo: "logo/logo_apple.jpg",
     name: "iPhone",
@@ -56,6 +61,7 @@ const smartphones_arr = [
     price: "₪5,429",
   },
   {
+    id: "40052",
     image: "Smartphone/s_s24_ultra.jpg",
     logo: "logo/logo_Samsung.jpg",
     name: "Galaxy",
@@ -67,6 +73,7 @@ const smartphones_arr = [
     price: "₪4,649",
   },
   {
+    id: "40053",
     image: "Smartphone/x_13_pro+.jpg",
     logo: "logo/logo_Xiaomi.jpg",
     name: "Redmi",
@@ -78,6 +85,7 @@ const smartphones_arr = [
     price: "₪1,720",
   },
   {
+    id: "40054",
     image: "Smartphone/a_14_plus.jpg",
     logo: "logo/logo_apple.jpg",
     name: "iPhone",
@@ -89,6 +97,7 @@ const smartphones_arr = [
     price: "₪2,899",
   },
   {
+    id: "40055",
     image: "Smartphone/a_13.jpg",
     logo: "logo/logo_apple.jpg",
     name: "iPhone",
@@ -100,6 +109,7 @@ const smartphones_arr = [
     price: "₪2,499",
   },
   {
+    id: "40056",
     image: "Smartphone/s_note_20.jpg",
     name: "Galaxy",
     logo: "logo/logo_Samsung.jpg",
@@ -110,6 +120,7 @@ const smartphones_arr = [
     price: "₪4,649",
   },
   {
+    id: "40057",
     image: "Smartphone/x_12.jpg",
     logo: "logo/logo_Xiaomi.jpg",
     name: "Redmi",
@@ -120,6 +131,7 @@ const smartphones_arr = [
     price: "₪559",
   },
   {
+    id: "40058",
     image: "Smartphone/x_paco_m6.jpg",
     logo: "logo/logo_Xiaomi.jpg",
     name: "Poco",
@@ -133,6 +145,7 @@ const smartphones_arr = [
 
 const props_arr = [
   {
+    id: "30025",
     image: "props/AirPodsMax.jpg",
     logo: "logo/logo_apple.jpg",
     name: "AirPods ",
@@ -143,6 +156,7 @@ const props_arr = [
     price: "₪2,500",
   },
   {
+    id: "30026",
     image: "props/sony2.jpg",
     logo: "logo/bose.jpg",
     name: "QuietComfort",
@@ -154,6 +168,7 @@ const props_arr = [
     price: "₪899",
   },
   {
+    id: "30027",
     image: "props/sony1.jpg",
     logo: "logo/sony.jpg",
     name: "",
@@ -165,6 +180,7 @@ const props_arr = [
     price: "₪1199",
   },
   {
+    id: "30028",
     image: "props/AirPodsPro2.jpg",
     logo: "logo/logo_apple.jpg",
     name: "",
@@ -175,6 +191,7 @@ const props_arr = [
     price: "₪1100",
   },
   {
+    id: "30029",
     image: "props/mouse1.jpg",
     logo: "logo/logo_logitech.jpg",
     name: "",
@@ -186,6 +203,7 @@ const props_arr = [
     price: "₪169",
   },
   {
+    id: "30030",
     image: "props/mouse2.jpg",
     logo: "logo/logo_apple.jpg",
     name: "",
@@ -196,6 +214,7 @@ const props_arr = [
     price: "₪299",
   },
   {
+    id: "30031",
     image: "props/mouse3.jpg",
     logo: "logo/",
     name: "",
@@ -207,6 +226,7 @@ const props_arr = [
     price: "₪120",
   },
   {
+    id: "30032",
     image: "props/keyboard3.jpg",
     logo: "logo/logo_logitech.jpg",
     name: "",
@@ -218,6 +238,7 @@ const props_arr = [
     price: "₪199",
   },
   {
+    id: "30033",
     image: "props/Keyboard2.jpg",
     logo: "logo/logo_logitech.jpg",
     name: "",
@@ -229,6 +250,7 @@ const props_arr = [
     price: "₪239",
   },
   {
+    id: "30034",
     image: "props/Keyboard1.jpg",
     logo: "logo/logo_apple.jpg",
     name: "",
@@ -240,6 +262,7 @@ const props_arr = [
     price: "₪369",
   },
   {
+    id: "30035",
     image: "props/WirelessChargingPad.jpg",
     logo: "logo/",
     name: "",
@@ -251,6 +274,7 @@ const props_arr = [
     price: "₪350",
   },
   {
+    id: "30036",
     image: "props/Apple_Power_Adapter.jpg",
     logo: "logo/logo_apple.jpg",
     name: "",
@@ -261,8 +285,9 @@ const props_arr = [
     price: "₪94",
   },
   {
+    id: "30037",
     image: "props/Anker735.jpg",
-    logo: "logo/",
+    logo: "logo/logo_ancer.jpg",
     name: "",
     type: "735 65W ",
     company: "Anker",
@@ -272,6 +297,7 @@ const props_arr = [
     price: "₪125",
   },
   {
+    id: "30038",
     image: "props/Cable.jpg",
     logo: "logo/logo_apple.jpg",
     name: "",
@@ -429,6 +455,7 @@ const tablets_arr = [
 
 const computers_arr = [
   {
+    id: "50087",
     image: "Computers/a_air_13.jpg",
     logo: "logo/logo_apple.jpg",
     name: "MacBook",
@@ -439,9 +466,9 @@ const computers_arr = [
       "Apple - MacBook Air 13.6 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Midnight",
     price: "₪429",
   },
-
   {
-    image: "Computers/a_pro_14.jpg ",
+    id: "50088",
+    image: "Computers/a_pro_14.jpg",
     logo: "logo/logo_apple.jpg",
     name: "MacBook",
     type: "pro 14 M3",
@@ -451,9 +478,9 @@ const computers_arr = [
       "Apple - MacBook Pro 14 Laptop - M3 chip Built for Apple Intelligence - 8GB Memory - 10-core GPU - 1TB SSD - Space Gray",
     price: "₪429",
   },
-
   {
-    image: "Computers/a_pro_16.jpg ",
+    id: "50089",
+    image: "Computers/a_pro_16.jpg",
     logo: "logo/logo_apple.jpg",
     name: "MacBook",
     type: "pro 16 M3",
@@ -463,8 +490,8 @@ const computers_arr = [
       "Apple - MacBook Pro 16 Laptop - M3 Max chip Built for Apple Intelligence - 48GB Memory - 40-core GPU - 1TB SSD - Space Black",
     price: "₪429",
   },
-
   {
+    id: "50090",
     image: "Computers/a_air_15.jpg",
     logo: "logo/logo_apple.jpg",
     name: "MacBook",
@@ -475,8 +502,8 @@ const computers_arr = [
       " Apple - MacBook Air 15 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Starlight",
     price: "₪5,429",
   },
-
   {
+    id: "50091",
     image: "Computers/l_yoga_slim_x7.jpg",
     logo: "logo/logo_lenovo.jpg",
     name: "Yoga",
@@ -488,10 +515,11 @@ const computers_arr = [
     price: "₪5,429",
   },
   {
+    id: "50092",
     image: "Computers/l_ideapad_1.jpg",
     logo: "logo/logo_lenovo.jpg",
     name: "Ideapad",
-    type: "Ideapad 1 ",
+    type: "Ideapad 1",
     company: "Lenovo",
     color: "Cloud Gray",
     details:
@@ -499,9 +527,10 @@ const computers_arr = [
     price: "₪5,429",
   },
   {
+    id: "50093",
     image: "Computers/l_Legion_Pro.jpg",
     logo: "logo/logo_lenovo.jpg",
-    name: "Legion ",
+    name: "Legion",
     type: "Pro 5i",
     company: "Lenovo",
     color: "Onyx Grey",
@@ -510,9 +539,10 @@ const computers_arr = [
     price: "₪5,429",
   },
   {
+    id: "50094",
     image: "Computers/l_LOQ.jpg",
     logo: "logo/logo_lenovo.jpg",
-    name: " LOQ ",
+    name: "LOQ",
     type: "LOQ 15.6 Gaming",
     company: "Lenovo",
     color: "Luna Grey",
@@ -520,22 +550,23 @@ const computers_arr = [
       "Lenovo - LOQ 15.6 Gaming Laptop FHD - AMD Ryzen 7 7435HS with 16GB Memory - NVIDIA GeForce RTX 4060 8GB - 512GB SSD - Luna Grey",
     price: "₪5,429",
   },
-
   {
+    id: "50095",
     image: "Computers/d_xps_13.jpg",
     logo: "logo/logo_dell.jpg",
-    name: "XPS 13 ",
+    name: "XPS 13",
     type: "13",
     company: "Dell",
-    color: " Graphite",
+    color: "Graphite",
     details:
       "Dell - XPS 13 - Copilot+ PC - 13.4 OLED Touch-Screen Laptop - Snapdragon X Elite w/ Dual Core Boost - 16GB Memory - 512GB SSD - Graphite",
     price: "₪5,429",
   },
   {
+    id: "50096",
     image: "Computers/d_Inspiron.jpg",
     logo: "logo/logo_dell.jpg",
-    name: "Inspiron ",
+    name: "Inspiron",
     type: "Inspiron 16 2-in-1",
     company: "Dell",
     color: "Midnight Blue",
@@ -543,22 +574,23 @@ const computers_arr = [
       "Dell - Inspiron 16 2-in-1 Mini-LED Touch Laptop Intel Core Ultra 7 Processor - 32GB Memory – 1TB SDD - Intel Arc Graphics - Midnight Blue",
     price: "₪5,429",
   },
-
   {
+    id: "50097",
     image: "Computers/h_OmniBook.jpg",
     logo: "logo/logo_hp.jpg",
-    name: "OmniBook ",
+    name: "OmniBook",
     type: "OmniBook X",
     company: "HP",
-    color: " Meteor Silver",
+    color: "Meteor Silver",
     details:
       "HP - OmniBook X - Copilot+ PC - 14 2.2K Touch-Screen Laptop - Snapdragon X Elite - 16GB Memory - 1TB SDD - Meteor Silver",
     price: "₪5,429",
   },
   {
+    id: "50098",
     image: "Computers/h_Spectre.jpg",
     logo: "logo/logo_hp.jpg",
-    name: " Spectre ",
+    name: "Spectre",
     type: "Spectre 2-in-1",
     company: "HP",
     color: "Nightfall Black",
