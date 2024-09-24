@@ -106,7 +106,7 @@ function addToBox(_json, _id) {
     });
 
   //create button in the box that add  elements to cart
-  mainBox.querySelector(".cartButton").addEventListener("click", function () {
+  mainBox.querySelector('.cartButton').addEventListener('click', function () {
     addToCart(_json);
   });
 }
@@ -124,19 +124,19 @@ function favorites(product, buttonElement) {
   if (!exists) {
     //add to favorites
     favorites_arr.push(product);
-    alert("Add to favorites successfully");
-    buttonElement.style.color = "red";
+    alert('Add to favorites successfully');
+    buttonElement.style.color = 'red';
   } else {
     // remove from favorites
     favorites_arr = favorites_arr.filter(
-      (favorites_arr) => favorites_arr.id !== product.id
+      (favorites_arr) => favorites_arr.id !== product.id,
     );
 
-    alert("remove from favorites successfully");
-    buttonElement.style.color = "black";
+    alert('remove from favorites successfully');
+    buttonElement.style.color = 'black';
   }
 
-  localStorage.setItem("favorites_arr", JSON.stringify(favorites_arr));
+  localStorage.setItem('favorites_arr', JSON.stringify(favorites_arr));
 }
 
 /**
@@ -163,7 +163,7 @@ function saveFavoritesInPrint() {
   });
 }
 
-let cart_arr = JSON.parse(localStorage.getItem("cart_arr")) || [];
+let cart_arr = JSON.parse(localStorage.getItem('cart_arr')) || [];
 /**
  * add to favorites
  * @param {object} product the product favorite
@@ -176,10 +176,10 @@ function addToCart(product) {
   if (!exists) {
     //add to favorites
     cart_arr.push(product);
-    alert("Add to cart successfully");
+    alert('Add to cart successfully');
   } else {
-    alert("The item in cart  Are you sure you want to add?");
+    alert('The item in cart  Are you sure you want to add?');
   }
 
-  localStorage.setItem("cart_arr", JSON.stringify(cart_arr));
+  localStorage.setItem('cart_arr', JSON.stringify(cart_arr));
 }
