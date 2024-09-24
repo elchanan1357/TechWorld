@@ -390,3 +390,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   displayInventory();
 });
+
+function isAmountAvailable(itemId, requestedAmount) {
+  // TODO
+  return true;
+}
