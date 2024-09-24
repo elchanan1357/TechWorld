@@ -2,7 +2,7 @@
  * create the top line in the inner page
  */
 function createTopLine() {
-  let topLine = document.getElementById('topLine');
+  let topLine = document.getElementById("topLine");
   topLine.innerHTML = buildTopLine(); //return the html  of top line
 }
 
@@ -56,30 +56,30 @@ function displayElement(_id, i) {
     //not contain arrow
     if (flag_display == false) {
       //if close then display
-      list.style.display = 'block';
+      list.style.display = "block";
       flag_display = true;
     } else {
       //close the list
-      list.style.display = 'none';
+      list.style.display = "none";
       flag_display = false;
     }
     return;
   }
 
-  let arrowUp = document.getElementsByClassName('arrow_up')[i];
-  let arrowDown = document.getElementsByClassName('arrow_down')[i];
+  let arrowUp = document.getElementsByClassName("arrow_up")[i];
+  let arrowDown = document.getElementsByClassName("arrow_down")[i];
 
   if (flag_display == false) {
     //if close then display
-    list.style.display = 'block';
-    arrowDown.style.display = 'none';
-    arrowUp.style.display = 'inline';
+    list.style.display = "block";
+    arrowDown.style.display = "none";
+    arrowUp.style.display = "inline";
     flag_display = true;
   } else {
     //close the list
-    list.style.display = 'none';
-    arrowDown.style.display = 'inline';
-    arrowUp.style.display = 'none';
+    list.style.display = "none";
+    arrowDown.style.display = "inline";
+    arrowUp.style.display = "none";
     flag_display = false;
   }
 }
@@ -91,8 +91,8 @@ function displayElement(_id, i) {
  * @param {number} _id id of the main box
  */
 function addToBox(_json, _id) {
-  let mainBox = document.createElement('div'); //create col in row
-  mainBox.className = 'mainBox col-md-3 border p-2';
+  let mainBox = document.createElement("div"); //create col in row
+  mainBox.className = "mainBox col-md-3 border p-2";
   document.getElementById(_id).appendChild(mainBox);
 
   //add element to the site
@@ -100,18 +100,18 @@ function addToBox(_json, _id) {
 
   //create button in the box that add  elements to favorites
   mainBox
-    .querySelector('.icon_favorites')
-    .addEventListener('click', function () {
+    .querySelector(".icon_favorites")
+    .addEventListener("click", function () {
       favorites(_json, this);
     });
 
   //create button in the box that add  elements to cart
-  mainBox.querySelector('.cartButton').addEventListener('click', function () {
+  mainBox.querySelector(".cartButton").addEventListener("click", function () {
     addToCart(_json);
   });
 }
 
-let favorites_arr = JSON.parse(localStorage.getItem('favorites_arr')) || [];
+let favorites_arr = JSON.parse(localStorage.getItem("favorites_arr")) || [];
 /**
  * add to favorites
  * @param {object} product the product favorite
@@ -124,19 +124,19 @@ function favorites(product, buttonElement) {
   if (!exists) {
     //add to favorites
     favorites_arr.push(product);
-    alert('Add to favorites successfully');
-    buttonElement.style.color = 'red';
+    alert("Add to favorites successfully");
+    buttonElement.style.color = "red";
   } else {
     // remove from favorites
     favorites_arr = favorites_arr.filter(
-      (favorites_arr) => favorites_arr.id !== product.id,
+      (favorites_arr) => favorites_arr.id !== product.id
     );
 
-    alert('remove from favorites successfully');
-    buttonElement.style.color = 'black';
+    alert("remove from favorites successfully");
+    buttonElement.style.color = "black";
   }
 
-  localStorage.setItem('favorites_arr', JSON.stringify(favorites_arr));
+  localStorage.setItem("favorites_arr", JSON.stringify(favorites_arr));
 }
 
 /**
@@ -147,23 +147,25 @@ function saveFavoritesInPrint() {
 
   favorites_arr.forEach((favorite) => {
     //init items in map
-    favoriteMap[favorite.details] = true;
+    favoriteMap[favorite.id] = true;
   });
 
-  let productElements = document.querySelectorAll('.mainBox'); //get all element in page
+  let productElements = document.querySelectorAll(".mainBox"); //get all element in page
 
   productElements.forEach((element) => {
-    let productName = element.querySelector('p').innerText;
+    let productID = parseInt(
+      element.querySelector(".id").innerText.split(":")[1]
+    );
 
     //check if item exist in the map
-    if (favoriteMap[productName]) {
-      let favoriteButton = element.querySelector('.icon_favorites');
-      favoriteButton.style.color = 'red';
+    if (favoriteMap[productID]) {
+      let favoriteButton = element.querySelector(".icon_favorites");
+      favoriteButton.style.color = "red";
     }
   });
 }
 
-let cart_arr = JSON.parse(localStorage.getItem('cart_arr')) || [];
+let cart_arr = JSON.parse(localStorage.getItem("cart_arr")) || [];
 /**
  * add to favorites
  * @param {object} product the product favorite
@@ -171,15 +173,20 @@ let cart_arr = JSON.parse(localStorage.getItem('cart_arr')) || [];
  */
 function addToCart(product) {
   //if the product already exist
-  let exists = favorites_arr.some((item) => item.id === product.id);
+  let exists = cart_arr.find((item) => item.id == product.id);
 
-  if (!exists) {
+  let amount = inventory_DB.find((item) => item.id == product.id).amount;
+
+  if (!exists && amount > 0) {
     //add to favorites
     cart_arr.push(product);
-    alert('Add to cart successfully');
+    alert("Add to cart successfully");
+    removeFromInventory(product.id, 1);
+  } else if (exists) {
+    alert("The item in cart. You can add in cart");
   } else {
-    alert('The item in cart  Are you sure you want to add?');
+    alert("The item is not in stock");
   }
 
-  localStorage.setItem('cart_arr', JSON.stringify(cart_arr));
+  localStorage.setItem("cart_arr", JSON.stringify(cart_arr));
 }
