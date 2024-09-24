@@ -1,9 +1,4 @@
-let items = [
-  { id: 1, name: 'Item 1', price: 10.0, amount: 1 },
-  { id: 2, name: 'Item 2', price: 15.5, amount: 1 },
-  { id: 3, name: 'Item 3', price: 7.75, amount: 1 },
-];
-
+let items = getItemsFromCart();
 let totalPrice = 0;
 
 function renderItems() {
@@ -20,7 +15,7 @@ function renderItems() {
     row.appendChild(divider());
 
     const itemProperties = [
-      itemImg('../Images/Computers/d_xps_13.jpg'),
+      itemImg(`../Images/${item.imageSrc}`),
       itemNameAndPrice(item),
       increaseAmount(item),
       itemAmount(item),
@@ -190,6 +185,10 @@ function changeAmountButton(item, operator) {
 
 function updateItemAndTotalPrices(item, operator) {
   if (operator === '+') {
+    if (!isAmountAvailable(item.id, item.amount + 1)) {
+      alert("More from this item is not available at the moment. Please check again later");
+      return;
+    }
     item.amount++;
     totalPrice += item.price;
   } else if (item.amount > 1 && operator === '-') {
@@ -199,4 +198,24 @@ function updateItemAndTotalPrices(item, operator) {
 
   renderItemPriceAndAmount(item);
   renderTotalPrice();
+}
+
+function getItemsFromCart() {
+  const items = JSON.parse(localStorage.getItem("cart_arr"));
+  const result = [];
+
+  items.forEach(item => {
+    let foundItem = result.find((each) => each.id === item.id);
+    if (foundItem !== undefined) {
+      foundItem.amount++;
+    } else {
+      result.push({id: item.id, name: item.name, amount: 1, imageSrc: item.image, price: toNumber(item.price)})
+    }
+  });
+
+  return result;
+}
+
+function toNumber(str) {
+  return Number(str.replace(/[^0-9]/g, ''));
 }
