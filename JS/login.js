@@ -16,5 +16,8 @@ function submit() {
     });
     window.location.href = 'index.html';
   }
-  localStorage.setItem('userData', JSON.stringify(complexArray[complexArray.length - 1]));
+  localStorage.setItem(
+    'userData',
+    JSON.stringify(complexArray[complexArray.length - 1]),
+  );
 }

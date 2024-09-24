@@ -12,16 +12,27 @@
   <!-- Logo section -->
   <div class="logo-section">
     <a href="Index.html">
-      <img src="../Images/logo/logoStore.jpg" alt="Logo" width="200" height="100" />
+      <img
+        src="../Images/logo/logoStore.jpg"
+        alt="Logo"
+        width="200"
+        height="100"
+      />
     </a>
   </div>
 
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="Index.html">
-        <span class="no-space" style="color: #3b5998; font-weight: bold">Tech</span>
-        <span class="no-space" style="color: black; font-weight: bold">World</span>
-        <span class="no-space" style="color: #3b5998; font-weight: bold">.</span>
+        <span class="no-space" style="color: #3b5998; font-weight: bold"
+          >Tech</span
+        >
+        <span class="no-space" style="color: black; font-weight: bold"
+          >World</span
+        >
+        <span class="no-space" style="color: #3b5998; font-weight: bold"
+          >.</span
+        >
       </a>
       <button
         class="navbar-toggler"
@@ -36,7 +47,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
           <!-- Another option of dropdown is available, see the html code at the end of the file-->
           <li class="nav-item">
             <a class="nav-link" href="Computer.html">Computers</a>
@@ -56,11 +66,34 @@
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item" id="login">
-            <a class="nav-link" href="login.html">Login</a>
+            <a class="btn nav-link login-link" role="button" href="login.html"
+              >Login</a
+            >
           </li>
-          <li class="nav-item" id="username" style="display: none">
-            <a class="nav-link"></a>
+          <li class="nav-item dropdown" id="username" style="display: none">
+            <a
+              class="nav-link dropdown-toggle username-link"
+              href="#"
+              id="userDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-person-circle"></i> Hello
+              <span id="userNameDisplay"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="userDropdown">
+              <!-- <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li> -->
+              <li id="stock-option" style="display: none">
+                <a class="dropdown-item" href="stock.html">Stock</a>
+              </li>
+              <li><a class="dropdown-item" id="logout" href="#">Logout</a></li>
+            </ul>
           </li>
+          <!-- <li class="nav-item" id="logout" style="display: none">
+            <a class="nav-link logout-link" href="#" role="button">Logout</a>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="Checkout.html">
               <svg
@@ -99,7 +132,6 @@
     </div>
   </nav>
 </div>
-
 
 <!-- 
           <li class="nav-item dropdown">
