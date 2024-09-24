@@ -395,6 +395,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function isAmountAvailable(itemId, requestedAmount) {
-  // TODO
-  return true;
+  const data =
+    JSON.parse(localStorage.getItem(local_storage_inventory_name)) || [];
+
+  let found = false;
+  data.forEach((item) => {
+    if (item.id == itemId) found = true;
+  });
+  return found;
 }
