@@ -6,6 +6,7 @@ const favoriteContainer = document.getElementById("favoriteItems");
  */
 function displayFavoriteItems() {
   if (favorites_arr.length === 0)
+    //not exist favorites
     document.getElementById("header").innerHTML = "No Favorites Yet...";
   else {
     favorites_arr.forEach((item) => {
@@ -13,7 +14,7 @@ function displayFavoriteItems() {
       itemElement.classList.add("col-md-2", "mb-2");
 
       itemElement.innerHTML = innerHTMLOfFavorites(item);
-      favoriteContainer.appendChild(itemElement);
+      favoriteContainer.appendChild(itemElement); //display item
     });
   }
 }
@@ -47,18 +48,14 @@ function removeFromFavorites() {
   const idElement = cardBody.querySelector(".id-price"); //get id
   const id = parseInt(idElement.textContent.split(":")[1]); //casting to number
 
-  console.log(favorites_arr);
-
-  // favorites_arr = favorites_arr.filter((item) => item.id !== id); //remove item
-  const index = favorites_arr.findIndex((item) => item.id === id);
-  if (index !== 1) favorites_arr.splice(index, 1);
+  const index = favorites_arr.findIndex((item) => item.id === id); //find index of item
+  if (index !== 1) favorites_arr.splice(index, 1); //remove item
 
   localStorage.setItem("favorites_arr", JSON.stringify(favorites_arr));
-  console.log(favorites_arr);
 
   alert("Product removed from cart successfully.");
   favoriteContainer.innerHTML = "";
-  displayFavoriteItems();
+  displayFavoriteItems(); //display element
 }
 
 /**
