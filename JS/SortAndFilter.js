@@ -4,7 +4,7 @@
  * @returns {number} float number
  */
 function parsePrice(price) {
-  return parseFloat(price.replace(/[₪,]/g, "")); //remove tags
+  return parseFloat(price.replace(/[₪,]/g, '')); //remove tags
 }
 
 let sort_arr = []; //for all type of sort
@@ -19,7 +19,7 @@ function lowToHigh(json_arr, id) {
 
   sort_arr.sort(
     //sort element
-    (item1, item2) => parsePrice(item1.price) - parsePrice(item2.price)
+    (item1, item2) => parsePrice(item1.price) - parsePrice(item2.price),
   );
 
   print(sort_arr, id); //display element
@@ -36,7 +36,7 @@ function highToLow(json_arr, id) {
 
   sort_arr.sort(
     //sort element
-    (item1, item2) => parsePrice(item2.price) - parsePrice(item1.price)
+    (item1, item2) => parsePrice(item2.price) - parsePrice(item1.price),
   );
 
   print(sort_arr, id); //display element
@@ -62,12 +62,12 @@ function popular(json_arr, id) {
  * @param {number} id id of page
  */
 function filter(json_arr, id) {
-  let from = document.getElementById("fromPrice").value;
-  let to = document.getElementById("toPrice").value;
+  let from = document.getElementById('fromPrice').value;
+  let to = document.getElementById('toPrice').value;
 
   //just element between (from , to)
   let temp_arr = json_arr.filter((item) => {
-    console.log(to + "  " + from);
+    console.log(to + '  ' + from);
     return parsePrice(item.price) >= from && parsePrice(item.price) <= to;
   });
 
@@ -85,7 +85,7 @@ function filter(json_arr, id) {
 function filterByCompany(json_arr, company, id, i) {
   let temp_arr = JSON.parse(JSON.stringify(json_arr)); //create copy
 
-  checkbox = document.getElementsByClassName("checkBox")[i]; //get element
+  checkbox = document.getElementsByClassName('checkBox')[i]; //get element
 
   if (checkbox.checked)
     temp_arr = json_arr.filter((item) => item.company === company);
@@ -104,7 +104,7 @@ function filterByCompany(json_arr, company, id, i) {
 function filterByColor(json_arr, color, id, i) {
   let temp_arr = JSON.parse(JSON.stringify(json_arr)); //create copy
 
-  checkbox = document.getElementsByClassName("checkBox")[i]; //get element
+  checkbox = document.getElementsByClassName('checkBox')[i]; //get element
   if (checkbox.checked)
     temp_arr = json_arr.filter((item) => item.color === color);
 
@@ -118,7 +118,7 @@ function filterByColor(json_arr, color, id, i) {
  * @param {number} id id of page
  */
 function print(json_arr, id) {
-  document.getElementById(id).innerHTML = ""; //clean the old element
+  document.getElementById(id).innerHTML = ''; //clean the old element
   json_arr.forEach((val) => addToBox(val, id));
 
   saveFavoritesInPrint();

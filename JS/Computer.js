@@ -1,18 +1,18 @@
 window.onload = function () {
   createTopLine();
 
-  print(computers_arr, "Computer"); //create element in page
+  print(computers_arr, 'Computer'); //create element in page
 
   //create list of sort
-  document.getElementById("sortList").innerHTML = listOfSort();
+  document.getElementById('sortList').innerHTML = listOfSort();
 
   //create list of filtering
-  document.getElementById("filterIn").innerHTML = `
+  document.getElementById('filterIn').innerHTML = `
   <button onclick="filter(computers_arr,'Computer')" class="mt-2">Filter</button>`;
-  document.getElementById("listColor").innerHTML = listOfColor();
-  document.getElementById("listCompany").innerHTML = listOfCompany();
+  document.getElementById('listColor').innerHTML = listOfColor();
+  document.getElementById('listCompany').innerHTML = listOfCompany();
 
-  for (let i = 0; i < 5; i++) createArrow("arrow_up", "arrow_down", i);
+  for (let i = 0; i < 5; i++) createArrow('arrow_up', 'arrow_down', i);
 };
 
 /**

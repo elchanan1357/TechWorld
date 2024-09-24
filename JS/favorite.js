@@ -1,21 +1,21 @@
-const favoriteItems = JSON.parse(localStorage.getItem("favorites_arr")) || []; //get favorite items
+const favoriteItems = JSON.parse(localStorage.getItem('favorites_arr')) || []; //get favorite items
 
 function displayFavoriteItems() {
-  const favoriteContainer = document.getElementById("favoriteItems");
+  const favoriteContainer = document.getElementById('favoriteItems');
 
   if (favoriteItems.length === 0)
-    favoriteContainer.innerHTML = "<p>No Favorites Yet...</p>";
+    favoriteContainer.innerHTML = '<p>No Favorites Yet...</p>';
   else
     favoriteItems.forEach((item) => {
-      const itemElement = document.createElement("div");
-      itemElement.className = "favorite-item";
+      const itemElement = document.createElement('div');
+      itemElement.className = 'favorite-item';
 
       itemElement.innerHTML = createHtmlFavorites(item); //display element
       favoriteContainer.appendChild(itemElement);
 
       itemElement
-        .querySelector(".cartButton")
-        .addEventListener("click", () => {});
+        .querySelector('.cartButton')
+        .addEventListener('click', () => {});
     });
 }
 
