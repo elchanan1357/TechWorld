@@ -154,10 +154,10 @@ function addBanner(id) {
   if (span) {
     // Create a new img element instead of using innerHTML
     let bannerImg = document.createElement("img");
+    bannerImg.className = "img-fluid";
     bannerImg.id = "bannerImg";
     bannerImg.src = images[i];
     bannerImg.alt = "banner";
-    bannerImg.width = 100;
 
     // Append the image to the container
     span.appendChild(bannerImg);

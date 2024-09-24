@@ -48,8 +48,7 @@ function removeFromFavorites() {
   const idElement = cardBody.querySelector(".id-price"); //get id
   const id = parseInt(idElement.textContent.split(":")[1]); //casting to number
 
-  const index = favorites_arr.findIndex((item) => item.id === id); //find index of item
-  if (index !== 1) favorites_arr.splice(index, 1); //remove item
+  favorites_arr = favorites_arr.filter((item) => item.id != id);
 
   localStorage.setItem("favorites_arr", JSON.stringify(favorites_arr));
 

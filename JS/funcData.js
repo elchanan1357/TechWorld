@@ -173,7 +173,7 @@ let cart_arr = JSON.parse(localStorage.getItem("cart_arr")) || [];
  */
 function addToCart(product) {
   //if the product already exist
-  let exists = cart_arr.find((item) => item.id == product.id);
+  let exists = cart_arr.find((item) => item.id === product.id);
 
   let amount = inventory_DB.find((item) => item.id == product.id).amount;
 
@@ -181,7 +181,7 @@ function addToCart(product) {
     //add to favorites
     cart_arr.push(product);
     alert("Add to cart successfully");
-    removeFromInventory(product.id, 1);
+    // removeFromInventory(product.id, 1);
   } else if (exists) {
     alert("The item in cart. You can add in cart");
   } else {
