@@ -15,7 +15,39 @@
     <link rel="stylesheet" href="../CSS/stock.css" />
   </head>
   <body>
-    <h1>sdnsdmsd</h1>
+    <!-- Bootstrap-->
+    <div class="rtl container mt-4">
+      <header><h1>Stock Inventory</h1></header>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search"
+          placeholder="חפש מוצר"
+          onkeyup="filteredProducts()"
+        />
+      </div>
+      <div id="inventory-container" class="row"></div>
+    </div>
+
+    <!-- Vanilla HTML table -->
+    <!-- <div class="container mt-4">
+      <h2 class="text-center">Inventory</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody id="inventory-table-body">
+
+        </tbody>
+      </table>
+    </div> -->
+
+    <script src="../JS/stock.js"></script>
     <script src="../JS/navbar.js"></script>
     <script src="../JS/shared.js"></script>
   </body>
