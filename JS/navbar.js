@@ -30,17 +30,33 @@ function initializeNavbarLogin() {
   });
 }
 
-// Fetch and load the navbar
-fetch('navbar.html')
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById('navbar-placeholder').innerHTML = data;
+/**
+ * Creating a parent element on the DOM to hold the navbar if element not found
+ * then fetching the navbar and initialize login and dropdown logic
+ */
+const loadNavbar = () => {
+  let navbarPlaceholder = document.getElementById('navbar-placeholder');
 
-    // Initialize navbar login functionality
-    initializeNavbarLogin();
+  if (!navbarPlaceholder) {
+    navbarPlaceholder = document.createElement('div');
+    navbarPlaceholder.id = 'navbar-placeholder';
+    document.body.insertBefore(navbarPlaceholder, document.body.firstChild);
+  }
 
-    // Initialize dropdowns inside the newly fetched navbar
-    // This is necessary even with the event listener inside the shared file, because the navbar was loaded asynchronously
-    initializeDropdowns();
-  })
-  .catch((error) => console.error('Error loading navbar:', error));
+  // Fetch and load the navbar
+  fetch('navbar.html')
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+      console.log('Navbar loaded');
+      // Initialize navbar login functionality
+      initializeNavbarLogin();
+
+      // Initialize dropdowns inside the newly fetched navbar
+      // This is necessary even with the event listener inside the shared file, because the navbar was loaded asynchronously
+      initializeDropdowns();
+    })
+    .catch((error) => console.error('Error loading navbar:', error));
+};
+
+loadNavbar();

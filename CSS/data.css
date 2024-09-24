@@ -106,8 +106,12 @@ body {
 }
 
 .main {
-  min-height: 1300px;
+  min-height: 500px;
+  max-height: 500px;
 }
+/* .mainBox {
+  background: yellowgreen;
+} */
 
 .mainBox .picBox {
   width: 100%;
@@ -133,7 +137,10 @@ body {
   width: 150px;
   height: 70px;
 }
-p {
+.id {
+  font-size: 20px;
+}
+.details {
   min-height: 100px;
   min-width: 100%;
 }

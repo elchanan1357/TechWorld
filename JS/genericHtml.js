@@ -157,7 +157,7 @@ function buildTopLine() {
 
 /**
  * build the box of all element in the site
- * @param {json} json
+ * @param {object} json
  */
 function buildBox(_json) {
   return `
@@ -175,7 +175,10 @@ function buildBox(_json) {
      </Button>
   </div>
      
-  <p class="col-md-10 m-1 mt-0">${_json.details}</p>
+ <div class="details_id">
+ <div class="id m-1"> ID:${_json.id}</div>
+  <p class="details col-md-10 m-1 mt-0">${_json.details}</p>
+ </div>
 
    <div class="delivery d-flex align-items-center mt-3">
       <div class="icon_delivery p-1 mx-2">  
