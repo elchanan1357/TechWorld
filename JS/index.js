@@ -33,3 +33,41 @@ function displayRandomProducts() {
 window.onload = function () {
   displayRandomProducts();
 };
+
+/**
+ * @description Random string (image path) from a giving arr
+ * with optional excluded value
+ * @param {Array<string>} images
+ * @param {string} excludeImage
+ * @returns {Array<string>}
+ */
+const getRandomImage = (images, excludeImage = null) => {
+  let filteredImages = images;
+  if (excludeImage)
+    filteredImages = images.filter((image) => image !== excludeImage);
+  return filteredImages[Math.floor(Math.random() * filteredImages.length)];
+};
+
+/**
+ * @description interval with 10 second on array of image path
+ * in order to replace images in home page
+ */
+function startRandomImageSwitch() {
+  const images = [
+    '../Images/Banars/banar_topPage/baner1.jpg',
+    '../Images/Banars/banar_topPage/baner2.jpg',
+    '../Images/Banars/banar_topPage/baner3.jpg',
+    '../Images/Banars/banar_topPage/baner4.jpg',
+    '../Images/Banars/banar_topPage/baner5.jpg',
+  ];
+
+  setInterval(() => {
+    const firstImage = getRandomImage(images);
+    // Make sure that will not display the same image twice on the same time
+    const secondImage = getRandomImage(images, firstImage);
+    document.getElementById('img1').src = firstImage;
+    document.getElementById('img2').src = secondImage;
+  }, 10000);
+}
+
+startRandomImageSwitch();
