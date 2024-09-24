@@ -64,3 +64,6 @@
     color: white;
   }
   
+  .no-space {
+    margin-right: -4px;
+  }

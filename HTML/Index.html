@@ -27,40 +27,25 @@
 
      <!-- Sections for random products from each category -->
      <div class="container mt-4">
-      <!-- Smartphones Section -->
       <h2>Smartphones</h2>
       <hr />
       <div id="Smartphones" class="row mb-5"></div>
-
-      <!-- Tablets Section -->
       <h2>Tablets</h2>
       <hr />
       <div id="Tablets" class="row mb-5"></div>
-
-      <!-- Computers Section -->
       <h2>Computers</h2>
       <hr />
       <div id="Computers" class="row mb-5"></div>
-
-      <!-- Props Section -->
       <h2>Props</h2>
       <hr />
       <div id="Props" class="row mb-5"></div>
     </div>
 
-    <script>
-      // JavaScript to load the navbar from an external file
-      fetch('navbar.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById('navbar-placeholder').innerHTML = data;
-        });
-    </script>
     <script src="../JS/index.js"></script>
+    <script src="../JS/navbar.js"></script>
+    <script src="../JS/shared.js"></script>
     <script src="../JS/data.js"></script>
     <script src="../JS/funcData.js"></script>
-  
     <script src="../JS/genericHtml.js"></script>
-    <script src="../JS/homepage.js"></script>
   </body>
 </html>
