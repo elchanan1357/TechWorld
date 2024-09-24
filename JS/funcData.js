@@ -2,7 +2,7 @@
  * create the top line in the inner page
  */
 function createTopLine() {
-  let topLine = document.getElementById("topLine");
+  let topLine = document.getElementById('topLine');
   topLine.innerHTML = buildTopLine(); //return the html  of top line
 }
 
@@ -56,30 +56,30 @@ function displayElement(_id, i) {
     //not contain arrow
     if (flag_display == false) {
       //if close then display
-      list.style.display = "block";
+      list.style.display = 'block';
       flag_display = true;
     } else {
       //close the list
-      list.style.display = "none";
+      list.style.display = 'none';
       flag_display = false;
     }
     return;
   }
 
-  let arrowUp = document.getElementsByClassName("arrow_up")[i];
-  let arrowDown = document.getElementsByClassName("arrow_down")[i];
+  let arrowUp = document.getElementsByClassName('arrow_up')[i];
+  let arrowDown = document.getElementsByClassName('arrow_down')[i];
 
   if (flag_display == false) {
     //if close then display
-    list.style.display = "block";
-    arrowDown.style.display = "none";
-    arrowUp.style.display = "inline";
+    list.style.display = 'block';
+    arrowDown.style.display = 'none';
+    arrowUp.style.display = 'inline';
     flag_display = true;
   } else {
     //close the list
-    list.style.display = "none";
-    arrowDown.style.display = "inline";
-    arrowUp.style.display = "none";
+    list.style.display = 'none';
+    arrowDown.style.display = 'inline';
+    arrowUp.style.display = 'none';
     flag_display = false;
   }
 }
@@ -91,8 +91,8 @@ function displayElement(_id, i) {
  * @param {number} _id id of the main box
  */
 function addToBox(_json, _id) {
-  let mainBox = document.createElement("div"); //create col in row
-  mainBox.className = "mainBox col-md-3 border p-2";
+  let mainBox = document.createElement('div'); //create col in row
+  mainBox.className = 'mainBox col-md-3 border p-2';
   document.getElementById(_id).appendChild(mainBox);
 
   //add element to the site
@@ -100,8 +100,8 @@ function addToBox(_json, _id) {
 
   //create button in the box that add  elements to favorites
   mainBox
-    .querySelector(".icon_favorites")
-    .addEventListener("click", function () {
+    .querySelector('.icon_favorites')
+    .addEventListener('click', function () {
       favorites(_json, this);
     });
 
@@ -111,7 +111,7 @@ function addToBox(_json, _id) {
   });
 }
 
-let favorites_arr = JSON.parse(localStorage.getItem("favorites_arr")) || [];
+let favorites_arr = JSON.parse(localStorage.getItem('favorites_arr')) || [];
 /**
  * add to favorites
  * @param {object} product the product favorite
@@ -150,15 +150,15 @@ function saveFavoritesInPrint() {
     favoriteMap[favorite.details] = true;
   });
 
-  let productElements = document.querySelectorAll(".mainBox"); //get all element in page
+  let productElements = document.querySelectorAll('.mainBox'); //get all element in page
 
   productElements.forEach((element) => {
-    let productName = element.querySelector("p").innerText;
+    let productName = element.querySelector('p').innerText;
 
     //check if item exist in the map
     if (favoriteMap[productName]) {
-      let favoriteButton = element.querySelector(".icon_favorites");
-      favoriteButton.style.color = "red";
+      let favoriteButton = element.querySelector('.icon_favorites');
+      favoriteButton.style.color = 'red';
     }
   });
 }

@@ -9,8 +9,8 @@ const smartphones_arr = [
     company: "Samsung",
     color: "Black",
     details:
-      "Samsung Galaxy A35 5G 8GB+256GB - Awesome Iceblue - 2 Year Warranty",
-    price: "₪3,645",
+      'Samsung Galaxy A35 5G 8GB+256GB - Awesome Iceblue - 2 Year Warranty',
+    price: '₪3,645',
   },
   {
     id: "40048",
@@ -21,8 +21,8 @@ const smartphones_arr = [
     company: "Apple",
     color: "White",
     details:
-      "Apple iPhone 15 256GB - Black - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones",
-    price: "₪4,949",
+      'Apple iPhone 15 256GB - Black - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones',
+    price: '₪4,949',
   },
   {
     id: "40049",
@@ -33,8 +33,8 @@ const smartphones_arr = [
     company: "Xiaomi",
     color: "Green",
     details:
-      "Xiaomi Redmi A3 4GB+128GB Forest Green - 2 Years Warranty by Hemilton",
-    price: "₪389",
+      'Xiaomi Redmi A3 4GB+128GB Forest Green - 2 Years Warranty by Hemilton',
+    price: '₪389',
   },
   {
     id: "40050",
@@ -45,8 +45,8 @@ const smartphones_arr = [
     company: "Samsung",
     color: "Silver",
     details:
-      "Samsung Galaxy S21 FE 5G 8GB+256GB Graphite SM-G990B2/DS - 2 Year Warranty",
-    price: "₪1,490",
+      'Samsung Galaxy S21 FE 5G 8GB+256GB Graphite SM-G990B2/DS - 2 Year Warranty',
+    price: '₪1,490',
   },
   {
     id: "40051",
@@ -57,8 +57,8 @@ const smartphones_arr = [
     company: "Apple",
     color: "Silver",
     details:
-      "Apple iPhone 15 Pro Max 256GB - Black Titanium - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones",
-    price: "₪5,429",
+      'Apple iPhone 15 Pro Max 256GB - Black Titanium - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones',
+    price: '₪5,429',
   },
   {
     id: "40052",
@@ -69,8 +69,8 @@ const smartphones_arr = [
     company: "Samsung",
     color: "White",
     details:
-      "Samsung Galaxy S24 Ultra 12GB+256GB Titanium Gray (SM-S928B/DS) - 1 Year Official",
-    price: "₪4,649",
+      'Samsung Galaxy S24 Ultra 12GB+256GB Titanium Gray (SM-S928B/DS) - 1 Year Official',
+    price: '₪4,649',
   },
   {
     id: "40053",
@@ -81,8 +81,8 @@ const smartphones_arr = [
     company: "Xiaomi",
     color: "Black",
     details:
-      "Xiaomi Redmi Note 13 Pro+ 5G 12GB+512GB Aurora Purple - 2 Years Warranty by Hemilton",
-    price: "₪1,720",
+      'Xiaomi Redmi Note 13 Pro+ 5G 12GB+512GB Aurora Purple - 2 Years Warranty by Hemilton',
+    price: '₪1,720',
   },
   {
     id: "40054",
@@ -93,8 +93,8 @@ const smartphones_arr = [
     company: "Apple",
     color: "Red",
     details:
-      "Apple iPhone 14 Plus 128GB - Blue - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones",
-    price: "₪2,899",
+      'Apple iPhone 14 Plus 128GB - Blue - 1 Year Warranty by the Official Distributor - Without Charger and Without Headphones',
+    price: '₪2,899',
   },
   {
     id: "40055",
@@ -105,8 +105,8 @@ const smartphones_arr = [
     company: "Apple",
     color: "Black",
     details:
-      "Apple iPhone 13 128GB Starlight - 1 Year Warranty by The Official Distributor - Without Charger And Without Headphones",
-    price: "₪2,499",
+      'Apple iPhone 13 128GB Starlight - 1 Year Warranty by The Official Distributor - Without Charger And Without Headphones',
+    price: '₪2,499',
   },
   {
     id: "40056",
@@ -164,8 +164,8 @@ const props_arr = [
     company: "Bose",
     color: "Black",
     details:
-      "Bose - QuietComfort Wireless Noise Cancelling Over-the-Ear Headphones - Black",
-    price: "₪899",
+      'Bose - QuietComfort Wireless Noise Cancelling Over-the-Ear Headphones - Black',
+    price: '₪899',
   },
   {
     id: "30027",
@@ -176,8 +176,8 @@ const props_arr = [
     company: "Sony",
     color: "Black",
     details:
-      "Sony - WH1000XM4 Wireless Noise-Cancelling Over-the-Ear Headphones - Black",
-    price: "₪1199",
+      'Sony - WH1000XM4 Wireless Noise-Cancelling Over-the-Ear Headphones - Black',
+    price: '₪1199',
   },
   {
     id: "30028",
@@ -199,8 +199,8 @@ const props_arr = [
     company: "Logitech",
     color: "Black",
     details:
-      "Logitech - MX Master 3S Wireless Laser Mouse with Ultrafast Scrolling - Black",
-    price: "₪169",
+      'Logitech - MX Master 3S Wireless Laser Mouse with Ultrafast Scrolling - Black',
+    price: '₪169',
   },
   {
     id: "30030",
@@ -222,8 +222,8 @@ const props_arr = [
     company: "Razer",
     color: "Black",
     details:
-      "Razer Basilisk V3 X HyperSpeed Customizable Wireless Gaming Mouse - Black",
-    price: "₪120",
+      'Razer Basilisk V3 X HyperSpeed Customizable Wireless Gaming Mouse - Black',
+    price: '₪120',
   },
   {
     id: "30032",
@@ -234,8 +234,8 @@ const props_arr = [
     company: "Logitech",
     color: "Black",
     details:
-      "Logitech - MX Keys S Advanced Full-size Wireless Scissor Keyboard for PC and Mac with Backlit keys - Black",
-    price: "₪199",
+      'Logitech - MX Keys S Advanced Full-size Wireless Scissor Keyboard for PC and Mac with Backlit keys - Black',
+    price: '₪199',
   },
   {
     id: "30033",
@@ -246,8 +246,8 @@ const props_arr = [
     company: "Logitech",
     color: "Graphite",
     details:
-      "Logitech - MX Mechanical Full size Wireless Mechanical Tactile Switch Keyboard for Windows/macOS with Backlit Keys - Graphite",
-    price: "₪239",
+      'Logitech - MX Mechanical Full size Wireless Mechanical Tactile Switch Keyboard for Windows/macOS with Backlit Keys - Graphite',
+    price: '₪239',
   },
   {
     id: "30034",
@@ -258,8 +258,8 @@ const props_arr = [
     company: "Apple",
     color: "Silver",
     details:
-      "Apple - Magic Keyboard full size with Numeric Keypad - Silver/White",
-    price: "₪369",
+      'Apple - Magic Keyboard full size with Numeric Keypad - Silver/White',
+    price: '₪369',
   },
   {
     id: "30035",
@@ -270,8 +270,8 @@ const props_arr = [
     company: "Belkin",
     color: "Black",
     details:
-      "Belkin - MagSafe 3-in-1 Wireless Charging Pad - Fast Wireless Charging for Apple Watch, iPhone 15, 14, 13 & 12 series, & AirPods - Black",
-    price: "₪350",
+      'Belkin - MagSafe 3-in-1 Wireless Charging Pad - Fast Wireless Charging for Apple Watch, iPhone 15, 14, 13 & 12 series, & AirPods - Black',
+    price: '₪350',
   },
   {
     id: "30036",
@@ -293,8 +293,8 @@ const props_arr = [
     company: "Anker",
     color: "Black",
     details:
-      "Anker - 735 65W 3 Port USB Foldable Fast Wall Charger with GaN for iPhone/Samsung/Tablets/Laptops - Black",
-    price: "₪125",
+      'Anker - 735 65W 3 Port USB Foldable Fast Wall Charger with GaN for iPhone/Samsung/Tablets/Laptops - Black',
+    price: '₪125',
   },
   {
     id: "30038",
@@ -305,151 +305,151 @@ const props_arr = [
     company: "Apple",
     color: "White",
     details: "Apple - 6.6' (2M) USB Type C-to-Lightning Charging Cable - White",
-    price: "₪69",
+    price: '₪69',
   },
 ];
 
 const tablets_arr = [
   {
-    id: "20013",
-    image: "Tablets/a_pro_m4.jpg",
-    logo: "logo/logo_apple.jpg",
-    name: "iPad",
-    type: "13-inch iPad Pro M4",
-    company: "Apple",
-    color: "Space Black",
+    id: '20013',
+    image: 'Tablets/a_pro_m4.jpg',
+    logo: 'logo/logo_apple.jpg',
+    name: 'iPad',
+    type: '13-inch iPad Pro M4',
+    company: 'Apple',
+    color: 'Space Black',
     details:
-      "Apple - 13-inch iPad Pro M4 chip Built for Apple Intelligence Wi-Fi 512GB with OLED - Space Black",
-    price: "₪5,429",
+      'Apple - 13-inch iPad Pro M4 chip Built for Apple Intelligence Wi-Fi 512GB with OLED - Space Black',
+    price: '₪5,429',
   },
   {
-    id: "20014",
-    image: "Tablets/a_11_air.jpg",
-    logo: "logo/logo_apple.jpg",
-    name: "iPad ",
-    type: "11-inch iPad Air M2",
-    company: "Apple",
-    color: "Starlight",
+    id: '20014',
+    image: 'Tablets/a_11_air.jpg',
+    logo: 'logo/logo_apple.jpg',
+    name: 'iPad ',
+    type: '11-inch iPad Air M2',
+    company: 'Apple',
+    color: 'Starlight',
     details:
-      "Apple - 11-inch iPad Air M2 chip Built for Apple Intelligence Wi-Fi 128GB - Starlight",
-    price: "₪3,100",
+      'Apple - 11-inch iPad Air M2 chip Built for Apple Intelligence Wi-Fi 128GB - Starlight',
+    price: '₪3,100',
   },
   {
-    id: "20015",
-    image: "Tablets/a_13__air.jpg",
-    logo: "logo/logo_apple.jpg",
-    name: "iPad",
-    type: "13-inch iPad Air M2",
-    company: "Apple",
-    color: "Blue",
+    id: '20015',
+    image: 'Tablets/a_13__air.jpg',
+    logo: 'logo/logo_apple.jpg',
+    name: 'iPad',
+    type: '13-inch iPad Air M2',
+    company: 'Apple',
+    color: 'Blue',
     details:
-      "Apple - 13-inch iPad Air M2 chip Built for Apple Intelligence Wi-Fi 128GB - Blue",
-    price: "₪2,899",
+      'Apple - 13-inch iPad Air M2 chip Built for Apple Intelligence Wi-Fi 128GB - Blue',
+    price: '₪2,899',
   },
   {
-    id: "20016",
-    image: "Tablets/a_10.9.jpg",
-    logo: "logo/logo_apple.jpg",
-    name: "iPad",
-    type: "10.9-Inch iPad",
-    company: "Apple",
-    color: "Silver",
+    id: '20016',
+    image: 'Tablets/a_10.9.jpg',
+    logo: 'logo/logo_apple.jpg',
+    name: 'iPad',
+    type: '10.9-Inch iPad',
+    company: 'Apple',
+    color: 'Silver',
     details:
-      "Apple - 10.9-Inch iPad - Latest Model - (10th Generation) with Wi-Fi - 64GB - Silver",
-    price: "₪2,699",
+      'Apple - 10.9-Inch iPad - Latest Model - (10th Generation) with Wi-Fi - 64GB - Silver',
+    price: '₪2,699',
   },
   {
-    id: "20017",
-    image: "Tablets/GalaxyTabS9.jpg",
-    logo: "logo/logo_Samsung.jpg",
-    name: "",
-    type: "Galaxy Tab S9",
-    company: "Samsung",
-    color: "Black",
+    id: '20017',
+    image: 'Tablets/GalaxyTabS9.jpg',
+    logo: 'logo/logo_Samsung.jpg',
+    name: '',
+    type: 'Galaxy Tab S9',
+    company: 'Samsung',
+    color: 'Black',
     details:
       "Samsung Galaxy Tab S9 Octa Core 3.2GHz 8GB+128GB 11'' Wi-Fi- Graphite (SM-X710) - 1 Year Warranty by the Official Distributor",
-    price: "₪3,089",
+    price: '₪3,089',
   },
   {
-    id: "20018",
-    image: "Tablets/GalaxyTabS9Ultra.jpg",
-    logo: "logo/logo_Samsung.jpg",
-    name: "",
-    type: "Galaxy Tab S9 Ultra",
-    company: "Samsung",
-    color: "Black",
+    id: '20018',
+    image: 'Tablets/GalaxyTabS9Ultra.jpg',
+    logo: 'logo/logo_Samsung.jpg',
+    name: '',
+    type: 'Galaxy Tab S9 Ultra',
+    company: 'Samsung',
+    color: 'Black',
     details:
       "Samsung Galaxy Tab S9 Ultra Octa Core 3.2GHz 12GB+256GB 14.6'' 5G - Beige (SM-X916) - 1 Year Warranty by the Official ",
-    price: "₪4,429",
+    price: '₪4,429',
   },
   {
-    id: "20019",
-    image: "Tablets/GalaxyTabS6Lite.jpg",
-    logo: "logo/logo_Samsung.jpg",
-    name: "",
-    type: " Galaxy Tab S6 Lite",
-    company: "Apple",
-    color: "Gray",
+    id: '20019',
+    image: 'Tablets/GalaxyTabS6Lite.jpg',
+    logo: 'logo/logo_Samsung.jpg',
+    name: '',
+    type: ' Galaxy Tab S6 Lite',
+    company: 'Apple',
+    color: 'Gray',
     details:
-      "Samsung Galaxy Tab S6 Lite 128GB SM-P620 - WiFi - Gray - 1 Year Warranty",
-    price: "₪1,599",
+      'Samsung Galaxy Tab S6 Lite 128GB SM-P620 - WiFi - Gray - 1 Year Warranty',
+    price: '₪1,599',
   },
   {
-    id: "20020",
-    image: "Tablets/GalaxyTabA9+.jpg",
-    logo: "logo/logo_Samsung.jpg",
-    name: "",
-    type: "Galaxy Tab A9+",
-    company: "Apple",
-    color: "Gray",
+    id: '20020',
+    image: 'Tablets/GalaxyTabA9+.jpg',
+    logo: 'logo/logo_Samsung.jpg',
+    name: '',
+    type: 'Galaxy Tab A9+',
+    company: 'Apple',
+    color: 'Gray',
     details:
       "Samsung Galaxy Tab A9+ Octa Core 2.2GHz 8GB+128GB 11'' 5G Gray (SM-X216) 1 Year Official",
-    price: "₪1,999",
+    price: '₪1,999',
   },
   {
-    id: "20021",
-    image: "Tablets/LenovoP12.jpg",
-    logo: "logo/logo_lenovo.jpg",
-    name: "",
-    type: "Lenovo TAB P12 ",
-    company: "Lenovo",
-    color: "Silver",
+    id: '20021',
+    image: 'Tablets/LenovoP12.jpg',
+    logo: 'logo/logo_lenovo.jpg',
+    name: '',
+    type: 'Lenovo TAB P12 ',
+    company: 'Lenovo',
+    color: 'Silver',
     details:
-      "Lenovo TAB P12 TB370FU MediaTek Dimensity 256GB ZACH0198IL -Silver",
-    price: "₪1,899",
+      'Lenovo TAB P12 TB370FU MediaTek Dimensity 256GB ZACH0198IL -Silver',
+    price: '₪1,899',
   },
   {
-    id: "20022",
-    image: "Tablets/LenovoTabP11.jpg",
-    logo: "logo/logo_lenovo.jpg",
-    name: "",
-    type: "Lenovo Tab P11 2nd Gen ",
-    company: "Lenovo",
-    color: "Silver",
-    details: "Lenovo Tab P11 2nd Gen TB350XU 128GB 4G ZABG0039IL -Silver",
-    price: "₪2,100",
+    id: '20022',
+    image: 'Tablets/LenovoTabP11.jpg',
+    logo: 'logo/logo_lenovo.jpg',
+    name: '',
+    type: 'Lenovo Tab P11 2nd Gen ',
+    company: 'Lenovo',
+    color: 'Silver',
+    details: 'Lenovo Tab P11 2nd Gen TB350XU 128GB 4G ZABG0039IL -Silver',
+    price: '₪2,100',
   },
   {
-    id: "20023",
-    image: "Tablets/LenovoYogaTAB11.jpg",
-    logo: "logo/logo_lenovo.jpg",
-    name: "",
-    type: "Lenovo Yoga TAB 11",
-    company: "Lenovo",
-    color: "Silver",
-    details: "Lenovo Yoga TAB 11 YT-J706F 256GB ZA8W0058IL Silver - WiFi",
-    price: "₪1,799",
+    id: '20023',
+    image: 'Tablets/LenovoYogaTAB11.jpg',
+    logo: 'logo/logo_lenovo.jpg',
+    name: '',
+    type: 'Lenovo Yoga TAB 11',
+    company: 'Lenovo',
+    color: 'Silver',
+    details: 'Lenovo Yoga TAB 11 YT-J706F 256GB ZA8W0058IL Silver - WiFi',
+    price: '₪1,799',
   },
   {
-    id: "20024",
-    image: "Tablets/LenovoTABPlus.jpg",
-    logo: "logo/logo_lenovo.jpg",
-    name: "",
-    type: "Lenovo TAB Plus",
-    company: "Lenovo",
-    color: "Silver",
-    details: "Lenovo TAB Plus TB351FU 256GB WiFi ZADX0104IL - Silver",
-    price: "₪1,799",
+    id: '20024',
+    image: 'Tablets/LenovoTABPlus.jpg',
+    logo: 'logo/logo_lenovo.jpg',
+    name: '',
+    type: 'Lenovo TAB Plus',
+    company: 'Lenovo',
+    color: 'Silver',
+    details: 'Lenovo TAB Plus TB351FU 256GB WiFi ZADX0104IL - Silver',
+    price: '₪1,799',
   },
 ];
 
@@ -463,8 +463,8 @@ const computers_arr = [
     company: "Apple",
     color: "Midnight",
     details:
-      "Apple - MacBook Air 13.6 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Midnight",
-    price: "₪429",
+      'Apple - MacBook Air 13.6 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Midnight',
+    price: '₪429',
   },
   {
     id: "50088",
@@ -475,8 +475,8 @@ const computers_arr = [
     company: "Apple",
     color: "space gray",
     details:
-      "Apple - MacBook Pro 14 Laptop - M3 chip Built for Apple Intelligence - 8GB Memory - 10-core GPU - 1TB SSD - Space Gray",
-    price: "₪429",
+      'Apple - MacBook Pro 14 Laptop - M3 chip Built for Apple Intelligence - 8GB Memory - 10-core GPU - 1TB SSD - Space Gray',
+    price: '₪429',
   },
   {
     id: "50089",
@@ -487,8 +487,8 @@ const computers_arr = [
     company: "Apple",
     color: "Space Black",
     details:
-      "Apple - MacBook Pro 16 Laptop - M3 Max chip Built for Apple Intelligence - 48GB Memory - 40-core GPU - 1TB SSD - Space Black",
-    price: "₪429",
+      'Apple - MacBook Pro 16 Laptop - M3 Max chip Built for Apple Intelligence - 48GB Memory - 40-core GPU - 1TB SSD - Space Black',
+    price: '₪429',
   },
   {
     id: "50090",
@@ -499,8 +499,8 @@ const computers_arr = [
     company: "Apple",
     color: "Starlight",
     details:
-      " Apple - MacBook Air 15 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Starlight",
-    price: "₪5,429",
+      ' Apple - MacBook Air 15 Laptop - M2 chip Built for Apple Intelligence - 8GB Memory - 256GB SSD - Starlight',
+    price: '₪5,429',
   },
   {
     id: "50091",
@@ -511,8 +511,8 @@ const computers_arr = [
     company: "Lenovo",
     color: "Cosmic Blue",
     details:
-      "Lenovo - Yoga Slim 7x - Copilot+ PC - 14.5 3K OLED Touch-Screen Laptop - Snapdragon X Elite - 16GB Memory - 512GB SSD - Cosmic Blue",
-    price: "₪5,429",
+      'Lenovo - Yoga Slim 7x - Copilot+ PC - 14.5 3K OLED Touch-Screen Laptop - Snapdragon X Elite - 16GB Memory - 512GB SSD - Cosmic Blue',
+    price: '₪5,429',
   },
   {
     id: "50092",
@@ -523,8 +523,8 @@ const computers_arr = [
     company: "Lenovo",
     color: "Cloud Gray",
     details:
-      "Lenovo - Ideapad 1 15.6 Full HD Touchscreen Laptop - Ryzen 7 5700U with 16GB Memory - AMD Radeon Graphics - 512GB SSD - Cloud Gray",
-    price: "₪5,429",
+      'Lenovo - Ideapad 1 15.6 Full HD Touchscreen Laptop - Ryzen 7 5700U with 16GB Memory - AMD Radeon Graphics - 512GB SSD - Cloud Gray',
+    price: '₪5,429',
   },
   {
     id: "50093",
@@ -535,8 +535,8 @@ const computers_arr = [
     company: "Lenovo",
     color: "Onyx Grey",
     details:
-      "Lenovo - Legion Pro 5i 16 Gaming Laptop WQXGA - Intel 14th Gen Core i9 with 32GB Memory - NVIDIA GeForce RTX 4070 8GB - 2TB SSD - Onyx Grey",
-    price: "₪5,429",
+      'Lenovo - Legion Pro 5i 16 Gaming Laptop WQXGA - Intel 14th Gen Core i9 with 32GB Memory - NVIDIA GeForce RTX 4070 8GB - 2TB SSD - Onyx Grey',
+    price: '₪5,429',
   },
   {
     id: "50094",
@@ -547,8 +547,8 @@ const computers_arr = [
     company: "Lenovo",
     color: "Luna Grey",
     details:
-      "Lenovo - LOQ 15.6 Gaming Laptop FHD - AMD Ryzen 7 7435HS with 16GB Memory - NVIDIA GeForce RTX 4060 8GB - 512GB SSD - Luna Grey",
-    price: "₪5,429",
+      'Lenovo - LOQ 15.6 Gaming Laptop FHD - AMD Ryzen 7 7435HS with 16GB Memory - NVIDIA GeForce RTX 4060 8GB - 512GB SSD - Luna Grey',
+    price: '₪5,429',
   },
   {
     id: "50095",
@@ -559,8 +559,8 @@ const computers_arr = [
     company: "Dell",
     color: "Graphite",
     details:
-      "Dell - XPS 13 - Copilot+ PC - 13.4 OLED Touch-Screen Laptop - Snapdragon X Elite w/ Dual Core Boost - 16GB Memory - 512GB SSD - Graphite",
-    price: "₪5,429",
+      'Dell - XPS 13 - Copilot+ PC - 13.4 OLED Touch-Screen Laptop - Snapdragon X Elite w/ Dual Core Boost - 16GB Memory - 512GB SSD - Graphite',
+    price: '₪5,429',
   },
   {
     id: "50096",
@@ -571,8 +571,8 @@ const computers_arr = [
     company: "Dell",
     color: "Midnight Blue",
     details:
-      "Dell - Inspiron 16 2-in-1 Mini-LED Touch Laptop Intel Core Ultra 7 Processor - 32GB Memory – 1TB SDD - Intel Arc Graphics - Midnight Blue",
-    price: "₪5,429",
+      'Dell - Inspiron 16 2-in-1 Mini-LED Touch Laptop Intel Core Ultra 7 Processor - 32GB Memory – 1TB SDD - Intel Arc Graphics - Midnight Blue',
+    price: '₪5,429',
   },
   {
     id: "50097",
@@ -583,8 +583,8 @@ const computers_arr = [
     company: "HP",
     color: "Meteor Silver",
     details:
-      "HP - OmniBook X - Copilot+ PC - 14 2.2K Touch-Screen Laptop - Snapdragon X Elite - 16GB Memory - 1TB SDD - Meteor Silver",
-    price: "₪5,429",
+      'HP - OmniBook X - Copilot+ PC - 14 2.2K Touch-Screen Laptop - Snapdragon X Elite - 16GB Memory - 1TB SDD - Meteor Silver',
+    price: '₪5,429',
   },
   {
     id: "50098",
@@ -595,8 +595,8 @@ const computers_arr = [
     company: "HP",
     color: "Nightfall Black",
     details:
-      "HP - Spectre 2-in-1 14 2.8K OLED Touch-Screen Laptop - Intel Core Ultra 7 - Intel Evo Edition - 16GB Memory - 1TB SSD - Nightfall Black",
-    price: "₪5,429",
+      'HP - Spectre 2-in-1 14 2.8K OLED Touch-Screen Laptop - Intel Core Ultra 7 - Intel Evo Edition - 16GB Memory - 1TB SSD - Nightfall Black',
+    price: '₪5,429',
   },
 ];
 
