@@ -153,7 +153,10 @@ function itemTrashIcon(item) {
 
   button.onclick = () => {
     totalPrice -= item.price * item.amount;
+    console.log(items);
     items.splice(items.indexOf(item), 1);
+    console.log(items);
+    removeFromCart(item.id);
     renderItems();
   };
 
@@ -186,30 +189,41 @@ function changeAmountButton(item, operator) {
 function updateItemAndTotalPrices(item, operator) {
   if (operator === '+') {
     if (!isAmountAvailable(item.id, item.amount + 1)) {
-      alert("More from this item is not available at the moment. Please check again later");
+      alert(
+        'More from this item is not available at the moment. Please check again later',
+      );
       return;
     }
     item.amount++;
+    updateStockAmount(item.id, 1);
+    updateCartAmount(item.id, 1);
     totalPrice += item.price;
   } else if (item.amount > 1 && operator === '-') {
     item.amount--;
+    updateStockAmount(item.id, -1);
+    updateCartAmount(item.id, -1);
     totalPrice -= item.price;
   }
-
   renderItemPriceAndAmount(item);
   renderTotalPrice();
 }
 
 function getItemsFromCart() {
-  const items = JSON.parse(localStorage.getItem("cart_arr"));
+  const items = JSON.parse(localStorage.getItem('currentCart'));
   const result = [];
 
-  items.forEach(item => {
+  items.forEach((item) => {
     let foundItem = result.find((each) => each.id === item.id);
     if (foundItem !== undefined) {
       foundItem.amount++;
     } else {
-      result.push({id: item.id, name: item.name, amount: 1, imageSrc: item.image, price: toNumber(item.price)})
+      result.push({
+        id: item.id,
+        name: item.name,
+        amount: 1,
+        imageSrc: item.image,
+        price: toNumber(item.price),
+      });
     }
   });
 
