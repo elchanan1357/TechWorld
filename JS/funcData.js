@@ -194,7 +194,7 @@ function addToCart(product) {
     setCurrentCart(currentCart); // =---------------
 
     alert("Add to cart successfully");
-    updateStockAmount(product.id, amount - 1);
+    updateStockAmount(product.id, -1);
   } else if (exists) {
     alert("The item in cart. You can add in cart");
   } else {
@@ -222,9 +222,18 @@ function updateCartAmount(productId, amount) {
   const currentCart = getCurrentCart();
   const product = currentCart.find((item) => item.id === productId);
   if (product) {
-    product.amount = amount;
+    // product.amount = product.amount + amount;
+    const updatedAmount = product.amount + amount;
+    if (updatedAmount < 0) {
+      alert(
+        `Unable to complete the request. product inventory is ${product.amount}`
+      );
+      throw new Error("Error: Amount cannot go below zero");
+    }
+
+    product.amount = updatedAmount;
     setCurrentCart(currentCart); //update cart
   } else {
-    throw new Error(`Product with id: ${productId} not found`);
+    // throw new Error(`Product with id: ${productId} not found`);
   }
 }
