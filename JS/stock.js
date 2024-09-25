@@ -290,9 +290,9 @@ function updateStockAmount(productId, amount) {
     const updatedAmount = product.amount + amount;
     if (updatedAmount < 0) {
       alert(
-        `Unable to complete the request. product inventory is ${product.amount}`
+        `Unable to complete the request. product inventory is ${product.amount}`,
       );
-      throw new Error("Error: Amount cannot go below zero");
+      throw new Error('Error: Amount cannot go below zero');
     }
 
     product.amount = updatedAmount;
@@ -302,11 +302,10 @@ function updateStockAmount(productId, amount) {
   }
 }
 
-
 // Set DB in local storage
 localStorage.setItem(
   local_storage_inventory_name,
-  JSON.stringify(inventory_DB)
+  JSON.stringify(inventory_DB),
 );
 
 // const inventory =
@@ -372,7 +371,7 @@ const filteredProducts = () => {
 
   displayInventory(_filteredProducts);
 };
-displayInventory()
+displayInventory();
 // Stock API
 const getProductAmount = (productId) => {
   const stock = getInventory();
@@ -412,10 +411,6 @@ const getProductAmount = (productId) => {
 //     alert("This product ID is not in our inventory");
 //   }
 // }
-
-
-
-
 
 // Throwing users without access out
 document.addEventListener('DOMContentLoaded', function () {
