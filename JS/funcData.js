@@ -235,7 +235,5 @@ function updateCartAmount(productId, amount) {
 
     product.amount = updatedAmount;
     setCurrentCart(currentCart); //update cart
-  } else {
-    // throw new Error(`Product with id: ${productId} not found`);
   }
 }
