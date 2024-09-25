@@ -241,14 +241,59 @@ let inventory_DB = [
   },
 ];
 
+/**
+ *
+ * @returns {Array<Record<'id' | 'type' | 'amount' | 'image', number | string>>}
+ */
+function getInventory() {
+  return JSON.parse(localStorage.getItem(local_storage_inventory_name)) || [];
+}
+
+function setInventory(stock) {
+  localStorage.setItem(local_storage_inventory_name, JSON.stringify(stock));
+}
+
+if (!getInventory()) {
+  setInventory(inventory_DB);
+}
+
+function updateStockAmount(productId, amount) {
+  const stock = getInventory();
+  const product = stock.find((item) => item.id === productId);
+  if (product) {
+    console.log(product);
+    const updatedAmount = product.amount + amount;
+    if (updatedAmount < 0) {
+      alert(
+        `Unable to complete the request. product inventory is ${product.amount}`
+      );
+      throw new Error("Error: Amount cannot go below zero");
+    }
+
+    product.amount = updatedAmount;
+    setInventory(stock);
+  } else {
+    throw new Error(`Product with id: ${productId} not found`);
+  }
+}
+
+const getProductAmount = (productId) => {
+  const stock = getInventory();
+  for (const item of stock) {
+    if (item.id == productId) {
+      return item.amount;
+    }
+  }
+};
+
 // Set DB in local storage
 localStorage.setItem(
   local_storage_inventory_name,
   JSON.stringify(inventory_DB)
 );
 
-const inventory =
-  JSON.parse(localStorage.getItem(local_storage_inventory_name)) || [];
+// const inventory =
+//   JSON.parse(localStorage.getItem(local_storage_inventory_name)) || [];
 
 // /**
 //  * Generate row on a Vanilla HTML table
@@ -277,7 +322,7 @@ function displayInventory(stock = getInventory()) {
   container.innerHTML = "";
 
   if (stock.length === 0) {
-    container.innerHTML = "<p>No inventory items found.</p>";
+    container.innerHTML = "<p>Stock is empty.</p>";
     return;
   }
   stock.forEach((item) => {
@@ -321,27 +366,27 @@ displayInventory();
  * @returns void
  * @throws alert if product id not found
  */
-function addToInventory(productId, amount) {
-  let inventory = JSON.parse(
-    localStorage.getItem(local_storage_inventory_name)
-  );
+// function addToInventory(productId, amount) {
+//   let inventory = JSON.parse(
+//     localStorage.getItem(local_storage_inventory_name)
+//   );
 
-  const product = inventory.find((item) => item.id == productId);
-  if (product) {
-    product.amount += amount;
-    localStorage.setItem(
-      local_storage_inventory_name,
-      JSON.stringify(inventory)
-    );
+//   const product = inventory.find((item) => item.id == productId);
+//   if (product) {
+//     product.amount += amount;
+//     localStorage.setItem(
+//       local_storage_inventory_name,
+//       JSON.stringify(inventory)
+//     );
 
-    // Represent real time data
-    displayInventory();
-  } else {
-    console.log(product);
+//     // Represent real time data
+//     displayInventory();
+//   } else {
+//     console.log(product);
 
-    alert("This product ID is not in our inventory");
-  }
-}
+//     alert("This product ID is not in our inventory");
+//   }
+// }
 
 /**
  * @description Remove quantity on existing product.
@@ -394,13 +439,13 @@ document.addEventListener("DOMContentLoaded", function () {
   displayInventory();
 });
 
-function isAmountAvailable(itemId, requestedAmount) {
+function isAmountAvailable(itemId) {
   const data =
     JSON.parse(localStorage.getItem(local_storage_inventory_name)) || [];
 
   let found = false;
   data.forEach((item) => {
-    if (item.id === itemId && requestedAmount <= item.amount) found = true;
+    if (item.id === itemId && 0 < item.amount) found = true;
   });
   return found;
 }

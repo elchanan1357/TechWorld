@@ -164,29 +164,78 @@ function saveFavoritesInPrint() {
     }
   });
 }
+/**
+ * update cart
+ * @param {localStorage} cart all element in cart
+ */
+const setCurrentCart = (cart) => {
+  localStorage.setItem("currentCart", JSON.stringify(cart));
+};
 
-let cart_arr = JSON.parse(localStorage.getItem("cart_arr")) || [];
+const getCurrentCart = () => {
+  return JSON.parse(localStorage.getItem("currentCart")) || [];
+};
+
+// let cart_arr = JSON.parse(localStorage.getItem("cart_arr")) || [];
 /**
  * add to favorites
  * @param {object} product the product favorite
  * @param {*} buttonElement
  */
 function addToCart(product) {
+  let currentCart = getCurrentCart(); //get the cart
   //if the product already exist
-  let exists = cart_arr.find((item) => item.id === product.id);
+  let foundInCart = currentCart.find((item) => item.id === product.id);
+  const amountStock = getProductAmount(product.id);
 
-  let amount = inventory_DB.find((item) => item.id == product.id).amount;
-
-  if (!exists && amount > 0) {
-    //add to favorites
-    cart_arr.push(product);
-    alert("Add to cart successfully");
-    // removeFromInventory(product.id, 1);
-  } else if (exists) {
-    alert("The item in cart. You can add in cart");
-  } else {
+  if (amountStock === 0) {
     alert("The item is not in stock");
+  } else if (!foundInCart) {
+    //add to cart
+    product["amount"] = 1; //add attribute to data
+    currentCart.push(product);
+    setCurrentCart(currentCart); // =---------------
+    alert("Add to cart successfully");
+    updateStockAmount(product.id, -1);
+  } else {
+    updateCartAmount(product.id, 1);
+    updateStockAmount(product.id, -1);
+    alert("Adding another item");
   }
+}
 
-  localStorage.setItem("cart_arr", JSON.stringify(cart_arr));
+/**
+ * remove item from the cart
+ * @param {number} productId id of item
+ */
+function removeFromCart(productId) {
+  const data = getCurrentCart();
+
+  const newCart = data.filter((item) => item.id !== productId);
+
+  // Update amount
+  setCurrentCart(newCart);
+}
+
+/**
+ *update amount in stock
+ */
+function updateCartAmount(productId, amount) {
+  const currentCart = getCurrentCart();
+  const product = currentCart.find((item) => item.id === productId);
+  if (product) {
+    // product.amount = product.amount + amount;
+    const updatedAmount = product.amount + amount;
+    if (updatedAmount < 0) {
+      alert(
+        `Unable to complete the request. product inventory is ${product.amount}`
+      );
+      throw new Error("Error: Amount cannot go below zero");
+    }
+
+    product.amount = updatedAmount;
+    setCurrentCart(currentCart); //update cart
+  } else {
+    // throw new Error(`Product with id: ${productId} not found`);
+  }
 }
