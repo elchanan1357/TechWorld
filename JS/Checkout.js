@@ -80,7 +80,7 @@ function itemBox() {
 
 function itemImg(imgSrc) {
   const img = document.createElement('img');
-  img.style = 'width: 30%; max-height: 180px;';
+  img.style = 'width: 18%; max-height: 180px;';
   img.src = imgSrc;
   img.alt = 'Item image';
   return img;
@@ -153,7 +153,10 @@ function itemTrashIcon(item) {
 
   button.onclick = () => {
     totalPrice -= item.price * item.amount;
+
     items.splice(items.indexOf(item), 1);
+    updateStockAmount(item.id, item.amount);
+    removeFromCart(item.id);
     renderItems();
   };
 
@@ -185,32 +188,38 @@ function changeAmountButton(item, operator) {
 
 function updateItemAndTotalPrices(item, operator) {
   if (operator === '+') {
-    if (!isAmountAvailable(item.id, item.amount + 1)) {
-      alert("More from this item is not available at the moment. Please check again later");
+    if (!isAmountAvailable(item.id)) {
+      alert(
+        'More from this item is not available at the moment. Please check again later',
+      );
       return;
     }
     item.amount++;
+    updateStockAmount(item.id, -1); //---------
+    updateCartAmount(item.id, 1); //---------
     totalPrice += item.price;
   } else if (item.amount > 1 && operator === '-') {
     item.amount--;
+    updateStockAmount(item.id, 1); //---------
+    updateCartAmount(item.id, -1); //--------
     totalPrice -= item.price;
   }
-
   renderItemPriceAndAmount(item);
   renderTotalPrice();
 }
 
 function getItemsFromCart() {
-  const items = JSON.parse(localStorage.getItem("cart_arr"));
+  const items = JSON.parse(localStorage.getItem('currentCart'));
   const result = [];
 
-  items.forEach(item => {
-    let foundItem = result.find((each) => each.id === item.id);
-    if (foundItem !== undefined) {
-      foundItem.amount++;
-    } else {
-      result.push({id: item.id, name: item.name, amount: 1, imageSrc: item.image, price: toNumber(item.price)})
-    }
+  items.forEach((item) => {
+    result.push({
+      id: item.id,
+      name: item.name,
+      amount: item.amount,
+      imageSrc: item.image,
+      price: toNumber(item.price),
+    });
   });
 
   return result;

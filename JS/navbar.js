@@ -48,7 +48,6 @@ const loadNavbar = () => {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById('navbar-placeholder').innerHTML = data;
-      console.log('Navbar loaded');
       // Initialize navbar login functionality
       initializeNavbarLogin();
 

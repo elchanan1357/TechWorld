@@ -1,10 +1,10 @@
-const linkConfigs = [
-  { href: 'Sales.html', img: '../Images/index/sale.png' },
-  {
-    href: 'https://www.calcalist.co.il/calcalistech/category/3778',
-    img: '../Images/index/whats-new.jpg',
-  },
-];
+// const linkConfigs = [
+//   { href: "Sales.html", img: "../Images/index/sale.png" },
+//   {
+//     href: "https://www.calcalist.co.il/calcalistech/category/3778",
+//     img: "../Images/index/whats-new.jpg",
+//   },
+// ];
 
 let currentIndex = 0;
 
@@ -27,6 +27,7 @@ function displayRandomProducts() {
   randomTablets.forEach((product) => addToBox(product, 'Tablets'));
   randomComputers.forEach((product) => addToBox(product, 'Computers'));
   randomProps.forEach((product) => addToBox(product, 'Props'));
+  saveFavoritesInPrint()
 }
 
 // Call the function to display products when the page loads
@@ -67,7 +68,7 @@ function startRandomImageSwitch() {
     const secondImage = getRandomImage(images, firstImage);
     document.getElementById('img1').src = firstImage;
     document.getElementById('img2').src = secondImage;
-  }, 10000);
+  }, 2500);
 }
 
 startRandomImageSwitch();
