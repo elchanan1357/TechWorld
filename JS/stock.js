@@ -358,36 +358,6 @@ const filteredProducts = () => {
 
 displayInventory();
 
-// Stock API
-/**
- * @description get product ID (from our existing product id) and add amount
- * @param {number} productId
- * @param {number} amount
- * @returns void
- * @throws alert if product id not found
- */
-// function addToInventory(productId, amount) {
-//   let inventory = JSON.parse(
-//     localStorage.getItem(local_storage_inventory_name)
-//   );
-
-//   const product = inventory.find((item) => item.id == productId);
-//   if (product) {
-//     product.amount += amount;
-//     localStorage.setItem(
-//       local_storage_inventory_name,
-//       JSON.stringify(inventory)
-//     );
-
-//     // Represent real time data
-//     displayInventory();
-//   } else {
-//     console.log(product);
-
-//     alert("This product ID is not in our inventory");
-//   }
-// }
-
 /**
  * @description Remove quantity on existing product.
  * @yields if product not found or quantity is bigger then exist
