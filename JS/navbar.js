@@ -26,6 +26,8 @@ function initializeNavbarLogin() {
 
   logoutElement.addEventListener('click', function () {
     localStorage.removeItem('userData');
+    localStorage.removeItem('currentCart');
+    localStorage.removeItem('favorites_arr');
     location.reload();
   });
 }
