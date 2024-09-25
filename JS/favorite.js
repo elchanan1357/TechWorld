@@ -1,5 +1,5 @@
-favorites_arr = JSON.parse(localStorage.getItem("favorites_arr")) || []; //get favorite items
-const favoriteContainer = document.getElementById("favoriteItems");
+favorites_arr = JSON.parse(localStorage.getItem('favorites_arr')) || []; //get favorite items
+const favoriteContainer = document.getElementById('favoriteItems');
 
 /**
  * display products in favorite
@@ -7,11 +7,11 @@ const favoriteContainer = document.getElementById("favoriteItems");
 function displayFavoriteItems() {
   if (favorites_arr.length === 0)
     //not exist favorites
-    document.getElementById("header").innerHTML = "No Favorites Yet...";
+    document.getElementById('header').innerHTML = 'No Favorites Yet...';
   else {
     favorites_arr.forEach((item) => {
-      const itemElement = document.createElement("div");
-      itemElement.classList.add("col-md-2", "mb-2");
+      const itemElement = document.createElement('div');
+      itemElement.classList.add('col-md-2', 'mb-2');
 
       itemElement.innerHTML = innerHTMLOfFavorites(item);
       favoriteContainer.appendChild(itemElement); //display item
@@ -23,11 +23,11 @@ function displayFavoriteItems() {
  * add element to cart
  */
 function addToCartFromFavorites() {
-  const cardBody = event.target.closest(".card-body"); //get the element
+  const cardBody = event.target.closest('.card-body'); //get the element
 
-  const idElement = cardBody.querySelector(".id-price"); //get id
+  const idElement = cardBody.querySelector('.id-price'); //get id
 
-  const id = parseInt(idElement.textContent.split(":")[1]);
+  const id = parseInt(idElement.textContent.split(':')[1]);
 
   //------------ find array and add to cart ------------//
   if (parseInt(id / 10000) == 5)
@@ -44,16 +44,16 @@ function addToCartFromFavorites() {
  * remove element from favorites
  */
 function removeFromFavorites() {
-  const cardBody = event.target.closest(".card-body"); //get the element
-  const idElement = cardBody.querySelector(".id-price"); //get id
-  const id = parseInt(idElement.textContent.split(":")[1]); //casting to number
+  const cardBody = event.target.closest('.card-body'); //get the element
+  const idElement = cardBody.querySelector('.id-price'); //get id
+  const id = parseInt(idElement.textContent.split(':')[1]); //casting to number
 
   favorites_arr = favorites_arr.filter((item) => item.id != id);
 
-  localStorage.setItem("favorites_arr", JSON.stringify(favorites_arr));
+  localStorage.setItem('favorites_arr', JSON.stringify(favorites_arr));
 
-  alert("Product removed from cart successfully.");
-  favoriteContainer.innerHTML = "";
+  alert('Product removed from cart successfully.');
+  favoriteContainer.innerHTML = '';
   displayFavoriteItems(); //display element
 }
 
