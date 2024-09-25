@@ -126,10 +126,10 @@ body {
 }
 
 .mainBox .middleBox .icon_favorites {
-  border-radius: 50%; /* עיגול מושלם */
+  border-radius: 50%;
   background: white;
-  border: 1px solid gray; /* מסגרת דקה בגובה 2 פיקסלים וצבע שחור */
-  width: 35px; /* או גובה ורוחב מותאמים אישית לפי הצורך */
+  border: 1px solid gray;
+  width: 35px;
   height: 35px;
 }
 
@@ -170,6 +170,20 @@ body {
   width: 60px;
 
   background-color: rgb(244, 200, 5);
+}
+.cartButton :hover {
+  border-radius: 10%;
+  border: none;
+
+  height: 35px;
+  width: 60px;
+}
+
+.icon_favorites :hover {
+  border-radius: 20%;
+  background: white;
+  width: 25px;
+  height: 25px;
 }
 
 #bannerImg {

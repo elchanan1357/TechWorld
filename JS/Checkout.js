@@ -155,7 +155,11 @@ function itemTrashIcon(item) {
     totalPrice -= item.price * item.amount;
     console.log(items);
     items.splice(items.indexOf(item), 1);
+<<<<<<< HEAD
     console.log(items);
+=======
+    updateStockAmount(item.id, item.amount);
+>>>>>>> 63e5aa1a4c3d0ca3ef9b5c94203531d9d3ecf748
     removeFromCart(item.id); //-------------
     renderItems();
   };
@@ -188,20 +192,20 @@ function changeAmountButton(item, operator) {
 
 function updateItemAndTotalPrices(item, operator) {
   if (operator === "+") {
-    if (!isAmountAvailable(item.id, item.amount + 1)) {
+    if (!isAmountAvailable(item.id)) {
       alert(
         "More from this item is not available at the moment. Please check again later"
       );
       return;
     }
     item.amount++;
-    updateStockAmount(item.id, 1); //---------
+    updateStockAmount(item.id, -1); //---------
     updateCartAmount(item.id, 1); //---------
     totalPrice += item.price;
   } else if (item.amount > 1 && operator === "-") {
     item.amount--;
-    updateStockAmount(item.id, -1); //---------
-    updateCartAmount(item.id, -1); //---------
+    updateStockAmount(item.id, 1); //---------
+    updateCartAmount(item.id, -1); //--------
     totalPrice -= item.price;
   }
   renderItemPriceAndAmount(item);
@@ -213,18 +217,13 @@ function getItemsFromCart() {
   const result = [];
 
   items.forEach((item) => {
-    let foundItem = result.find((each) => each.id === item.id);
-    if (foundItem !== undefined) {
-      foundItem.amount++;
-    } else {
-      result.push({
-        id: item.id,
-        name: item.name,
-        amount: 1,
-        imageSrc: item.image,
-        price: toNumber(item.price),
-      });
-    }
+    result.push({
+      id: item.id,
+      name: item.name,
+      amount: item.amount,
+      imageSrc: item.image,
+      price: toNumber(item.price),
+    });
   });
 
   return result;

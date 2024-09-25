@@ -1,18 +1,18 @@
 //when window is on loading
 window.onload = function () {
   createTopLine(); //create the top line
-  print(smartphones_arr, 'Smartphone'); //create element in page
+  print(smartphones_arr, "Smartphone"); //create element in page
 
   //create list of sort
-  document.getElementById('sortList').innerHTML = listOfSort();
+  document.getElementById("sortList").innerHTML = listOfSort();
 
   //create list of filtering
-  document.getElementById('filterIn').innerHTML = `
+  document.getElementById("filterIn").innerHTML = `
   <button onclick="filter(smartphones_arr,'Smartphone')" class="mt-2">Filter</button>`;
-  document.getElementById('listColor').innerHTML = listOfColor();
-  document.getElementById('listCompany').innerHTML = listOfCompany();
+  document.getElementById("listColor").innerHTML = listOfColor();
+  document.getElementById("listCompany").innerHTML = listOfCompany();
 
-  for (let i = 0; i < 5; i++) createArrow('arrow_up', 'arrow_down', i);
+  for (let i = 0; i < 5; i++) createArrow("arrow_up", "arrow_down", i);
 };
 
 /**
@@ -55,13 +55,4 @@ function listOfColor() {
                     <input onchange="filterByColor(smartphones_arr,'Silver','Smartphone',5)" class="checkBox" type="checkbox" />
                     Silver
   `;
-}
-
-function addBanaras(_id) {
-  let banner = document.createElement('div');
-  document.getElementById(_id).innerHTML += `
-        <a href="https://www.apple.com/iphone-16-pro/">
-           <img src="../Images/Banars/pro_16.jpg" alt="" class="col-lg-12 p-0" />
-        </a>
-`;
 }

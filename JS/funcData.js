@@ -164,7 +164,22 @@ function saveFavoritesInPrint() {
     }
   });
 }
+/**
+ * update cart
+ * @param {localStorage} cart all element in cart
+ */
+const setCurrentCart = (cart) => {
+  localStorage.setItem("currentCart", JSON.stringify(cart));
+};
 
+const getCurrentCart = () => {
+  return JSON.parse(localStorage.getItem("currentCart")) || [];
+};
+
+<<<<<<< HEAD
+=======
+// let cart_arr = JSON.parse(localStorage.getItem("cart_arr")) || [];
+>>>>>>> 63e5aa1a4c3d0ca3ef9b5c94203531d9d3ecf748
 /**
  * update cart
  * @param {localStorage} cart all element in cart
@@ -182,23 +197,24 @@ const getCurrentCart = () => {
  * @param {object} product the product favorite
  */
 function addToCart(product) {
-  let currentCart = getCurrentCart();
+  let currentCart = getCurrentCart(); //get the cart
   //if the product already exist
-  let exists = currentCart.find((item) => item.id === product.id);
-  const amount = getProductAmount(product.id);
+  let foundInCart = currentCart.find((item) => item.id === product.id);
+  const amountStock = getProductAmount(product.id);
 
-  if (!exists && amount > 0) {
+  if (amountStock === 0) {
+    alert("The item is not in stock");
+  } else if (!foundInCart) {
     //add to cart
-    product["amount"] = 0; //add attribute to data
+    product["amount"] = 1; //add attribute to data
     currentCart.push(product);
     setCurrentCart(currentCart); // =---------------
-
     alert("Add to cart successfully");
     updateStockAmount(product.id, -1);
-  } else if (exists) {
-    alert("The item in cart. You can add in cart");
   } else {
-    alert("The item is not in stock");
+    updateCartAmount(product.id, 1);
+    updateStockAmount(product.id, -1);
+    alert("Adding another item");
   }
 }
 
@@ -233,7 +249,5 @@ function updateCartAmount(productId, amount) {
 
     product.amount = updatedAmount;
     setCurrentCart(currentCart); //update cart
-  } else {
-    // throw new Error(`Product with id: ${productId} not found`);
   }
 }

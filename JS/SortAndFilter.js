@@ -146,6 +146,7 @@ function addBanner(id) {
     "../Images/Banars/banner_homePage/6.jpg",
     "../Images/Banars/banner_homePage/7.jpg",
     "../Images/Banars/banner_homePage/8.jpg",
+    "../Images/Banars/banner_homePage/9.jpg",
   ];
 
   let span = document.getElementById(id);
