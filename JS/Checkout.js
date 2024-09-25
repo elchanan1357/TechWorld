@@ -1,6 +1,27 @@
 let items = getItemsFromCart();
 let totalPrice = 0;
 
+(function () {
+  emailjs.init('BqR5Xa490S-GYGE6C');
+})();
+
+function sendEmail(recipientEmail, recipientName, message) {
+  const templateParams = {
+    to_email: recipientEmail,
+    to_name: recipientName,
+    message: message,
+  };
+
+  emailjs.send('service_dtew28l', 'template_qo0dfug', templateParams).then(
+    function (response) {
+      console.log('Email sent successfully!', response.status, response.text);
+    },
+    function (error) {
+      console.log('Failed to send email.', error);
+    },
+  );
+}
+
 function renderItems() {
   const itemList = document.getElementById('item-list');
   itemList.innerHTML = '';
@@ -60,6 +81,15 @@ function handlePaymentAlert() {
 
     successAlert.classList.remove('d-none');
     successAlert.classList.add('d-block');
+
+    const userData = JSON.parse(localStorage.getItem('userData')) || [];
+    if (userData && userData.length !== 0) {
+      sendEmail(
+        userData.email,
+        userData.firstName,
+        `Thanks from buying from us`,
+      );
+    }
   });
 }
 
