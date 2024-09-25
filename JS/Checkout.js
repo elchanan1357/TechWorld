@@ -79,11 +79,13 @@ function itemBox() {
 }
 
 function itemImg(imgSrc) {
+  const div = getDiv("col-2");
   const img = document.createElement('img');
-  img.style = 'width: 30%; max-height: 180px;';
+  img.style = 'width: 80%; height: auto;';
   img.src = imgSrc;
   img.alt = 'Item image';
-  return img;
+  div.appendChild(img);
+  return div;
 }
 
 function itemNameAndPrice(item) {
