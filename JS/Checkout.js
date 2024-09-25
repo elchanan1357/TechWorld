@@ -153,10 +153,10 @@ function itemTrashIcon(item) {
 
   button.onclick = () => {
     totalPrice -= item.price * item.amount;
-    console.log(items);
+
     items.splice(items.indexOf(item), 1);
     updateStockAmount(item.id, item.amount);
-    removeFromCart(item.id); //-------------
+    removeFromCart(item.id);
     renderItems();
   };
 

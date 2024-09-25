@@ -27,6 +27,7 @@ function displayRandomProducts() {
   randomTablets.forEach((product) => addToBox(product, 'Tablets'));
   randomComputers.forEach((product) => addToBox(product, 'Computers'));
   randomProps.forEach((product) => addToBox(product, 'Props'));
+  saveFavoritesInPrint()
 }
 
 // Call the function to display products when the page loads

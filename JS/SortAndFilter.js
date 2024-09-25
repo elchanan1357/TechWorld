@@ -67,7 +67,6 @@ function filter(json_arr, id) {
 
   //just element between (from , to)
   let temp_arr = json_arr.filter((item) => {
-    console.log(to + '  ' + from);
     return parsePrice(item.price) >= from && parsePrice(item.price) <= to;
   });
 

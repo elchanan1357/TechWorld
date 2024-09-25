@@ -253,40 +253,14 @@ function setInventory(stock) {
   localStorage.setItem(local_storage_inventory_name, JSON.stringify(stock));
 }
 
-if (!getInventory()) {
+if (!getInventory().length === 0) {
   setInventory(inventory_DB);
 }
-
-/**
- * This method is for manager only. add unlimited new amount
- * @param {number} productId
- * @param {number} newAmount
- */
-// function updateStockAmount(productId, amount) {
-//   const stock = getInventory();
-//   const product = stock.find((item) => item.id === productId);
-//   if (product) {
-//     console.log(product)
-//     const updatedAmount = product.amount + amount;
-//     if (updatedAmount < 0) {
-//       alert(
-//         `Unable to complete the request. product inventory is ${product.amount}`,
-//       );
-//       throw new Error('Error: Amount cannot go below zero');
-//     }
-
-//     product.amount = updatedAmount;
-//     setInventory(stock);
-//   } else {
-//     throw new Error(`Product with id: ${productId} not found`);
-//   }
-// }
 
 function updateStockAmount(productId, amount) {
   const stock = getInventory();
   const product = stock.find((item) => item.id === productId);
   if (product) {
-    console.log(product);
     const updatedAmount = product.amount + amount;
     if (updatedAmount < 0) {
       alert(
@@ -302,14 +276,16 @@ function updateStockAmount(productId, amount) {
   }
 }
 
-// Set DB in local storage
-localStorage.setItem(
-  local_storage_inventory_name,
-  JSON.stringify(inventory_DB),
-);
+const getProductAmount = (productId) => {
+  const stock = getInventory();
+  for (const item of stock) {
+    if (item.id == productId) {
+      return item.amount;
+    }
+  }
+};
 
-// const inventory =
-//   JSON.parse(localStorage.getItem(local_storage_inventory_name)) || [];
+
 
 // /**
 //  * Generate row on a Vanilla HTML table
@@ -371,46 +347,48 @@ const filteredProducts = () => {
 
   displayInventory(_filteredProducts);
 };
-displayInventory();
-// Stock API
-const getProductAmount = (productId) => {
-  const stock = getInventory();
-  for (const item of stock) {
-    if (item.id == productId) {
-      return item.amount;
-    }
-  }
 
-  throw new Error(`Product id: ${productId} not found in stock`);
-};
+displayInventory();
+
+// Stock API
+
+
 /**
- * @description get product ID (from our existing product id) and add amount
+ * @description Remove quantity on existing product.
+ * @yields if product not found or quantity is bigger then exist
  * @param {number} productId
  * @param {number} amount
- * @returns void
- * @throws alert if product id not found
  */
-// function addToInventory(productId, amount) {
-//   let inventory = JSON.parse(
-//     localStorage.getItem(local_storage_inventory_name)
-//   );
+function removeFromInventory(productId, amount) {
+  let inventory = JSON.parse(
+    localStorage.getItem(local_storage_inventory_name),
+  );
 
-//   const product = inventory.find((item) => item.id == productId);
-//   if (product) {
-//     product.amount += amount;
-//     localStorage.setItem(
-//       local_storage_inventory_name,
-//       JSON.stringify(inventory)
-//     );
+  const product = inventory.find((item) => item.id == productId);
 
-//     // Represent real time data
-//     displayInventory();
-//   } else {
-//     console.log(product);
+  if (product && product.amount >= amount) {
+    product.amount -= amount;
+    localStorage.setItem(
+      local_storage_inventory_name,
+      JSON.stringify(inventory),
+    );
 
-//     alert("This product ID is not in our inventory");
-//   }
-// }
+    // Represent real time data
+    displayInventory();
+  } else if (product && product.amount < amount) {
+    alert('The quantity you wish to decrease is bigger than the existing');
+  } else {
+    alert('Product ID not found');
+  }
+}
+
+/**
+ *
+ * @returns {Array<Record<'id' | 'type' | 'amount' | 'image', number | string>>}
+ */
+function getInventory() {
+    return JSON.parse(localStorage.getItem(local_storage_inventory_name)) || [];
+}
 
 // Throwing users without access out
 document.addEventListener('DOMContentLoaded', function () {
