@@ -400,7 +400,7 @@ function isAmountAvailable(itemId, requestedAmount) {
 
   let found = false;
   data.forEach((item) => {
-    if (item.id == itemId) found = true;
+    if (item.id === itemId && requestedAmount <= item.amount) found = true;
   });
   return found;
 }
