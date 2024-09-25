@@ -68,7 +68,7 @@ function startRandomImageSwitch() {
     const secondImage = getRandomImage(images, firstImage);
     document.getElementById('img1').src = firstImage;
     document.getElementById('img2').src = secondImage;
-  }, 10000);
+  }, 2500);
 }
 
 startRandomImageSwitch();

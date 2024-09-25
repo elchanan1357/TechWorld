@@ -80,7 +80,7 @@ function itemBox() {
 
 function itemImg(imgSrc) {
   const img = document.createElement('img');
-  img.style = 'width: 30%; max-height: 180px;';
+  img.style = 'width: 18%; max-height: 180px;';
   img.src = imgSrc;
   img.alt = 'Item image';
   return img;
