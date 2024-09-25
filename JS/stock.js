@@ -321,7 +321,7 @@ const filteredProducts = () => {
 
   displayInventory(_filteredProducts);
 };
-
+displayInventory()
 // Stock API
 const getProductAmount = (productId) => {
   const stock = getInventory();
