@@ -350,7 +350,6 @@ const filteredProducts = () => {
 
 displayInventory();
 
-// Stock API
 
 
 /**
