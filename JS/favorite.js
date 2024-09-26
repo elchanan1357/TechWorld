@@ -63,7 +63,7 @@ function removeFromFavorites() {
  * @returns {string} return html
  */
 function innerHTMLOfFavorites(item) {
-  return `
+  return `  
               <div class="card h-100">
                 <img src="../Images/${item.image}" class="card-img-top">
                 <div class="card-body">
