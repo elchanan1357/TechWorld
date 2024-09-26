@@ -253,7 +253,7 @@ function setInventory(stock) {
   localStorage.setItem(local_storage_inventory_name, JSON.stringify(stock));
 }
 
-if (!getInventory().length === 0) {
+if (getInventory().length === 0) {
   setInventory(inventory_DB);
 }
 
@@ -284,8 +284,6 @@ const getProductAmount = (productId) => {
     }
   }
 };
-
-
 
 // /**
 //  * Generate row on a Vanilla HTML table
@@ -351,7 +349,6 @@ const filteredProducts = () => {
 displayInventory();
 
 
-
 /**
  * @description Remove quantity on existing product.
  * @yields if product not found or quantity is bigger then exist
@@ -386,7 +383,7 @@ function removeFromInventory(productId, amount) {
  * @returns {Array<Record<'id' | 'type' | 'amount' | 'image', number | string>>}
  */
 function getInventory() {
-    return JSON.parse(localStorage.getItem(local_storage_inventory_name)) || [];
+  return JSON.parse(localStorage.getItem(local_storage_inventory_name)) || [];
 }
 
 // Throwing users without access out
