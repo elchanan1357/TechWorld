@@ -309,28 +309,30 @@ const getProductAmount = (productId) => {
  */
 function displayInventory(stock = getInventory()) {
   const container = document.getElementById('inventory-container');
-  container.innerHTML = '';
+  if (container) {
+    container.innerHTML = '';
 
-  if (stock.length === 0) {
-    container.innerHTML = '<p>Stock is empty.</p>';
-    return;
-  }
-  stock.forEach((item) => {
-    const itemElement = document.createElement('div');
-    itemElement.classList.add('col-md-2', 'mb-2');
+    if (stock.length === 0) {
+      container.innerHTML = '<p>Stock is empty.</p>';
+      return;
+    }
+    stock.forEach((item) => {
+      const itemElement = document.createElement('div');
+      itemElement.classList.add('col-md-2', 'mb-2');
 
-    itemElement.innerHTML = `
-        <div class="card h-100">
-          <img src="../Images/${item.image}" class="card-img-top" alt="${item.type}">
-          <div class="card-body">
+      itemElement.innerHTML = `
+      <div class="card h-100">
+      <img src="../Images/${item.image}" class="card-img-top" alt="${item.type}">
+      <div class="card-body">
             <h5 class="card-title">${item.type}</h5>
             <p class="card-text"><strong>ID:</strong> ${item.id}</p>
             <p class="card-text"><strong>Available:</strong> ${item.amount}</p>
-          </div>
-        </div>
-      `;
-    container.appendChild(itemElement);
-  });
+            </div>
+            </div>
+            `;
+      container.appendChild(itemElement);
+    });
+  }
 }
 
 /**
@@ -347,7 +349,6 @@ const filteredProducts = () => {
 };
 
 displayInventory();
-
 
 /**
  * @description Remove quantity on existing product.

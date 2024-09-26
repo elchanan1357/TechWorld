@@ -32,6 +32,22 @@ function initializeNavbarLogin() {
   });
 }
 
+// Function to initialize dropdowns only when Bootstrap is fully loaded
+function ensureBootstrapAndInitializeDropdowns() {
+  if (!window.bootstrap) {
+    const bootstrapScript = document.createElement('script');
+    bootstrapScript.src =
+      'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
+    bootstrapScript.integrity =
+      'sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz';
+    bootstrapScript.crossOrigin = 'anonymous';
+    bootstrapScript.onload = initializeDropdowns; // Ensure dropdowns initialize after the script is loaded
+    document.head.appendChild(bootstrapScript);
+  } else {
+    initializeDropdowns(); // Bootstrap is already loaded
+  }
+}
+
 /**
  * Creating a parent element on the DOM to hold the navbar if element not found
  * then fetching the navbar and initialize login and dropdown logic
@@ -55,7 +71,7 @@ const loadNavbar = () => {
 
       // Initialize dropdowns inside the newly fetched navbar
       // This is necessary even with the event listener inside the shared file, because the navbar was loaded asynchronously
-      initializeDropdowns();
+      ensureBootstrapAndInitializeDropdowns();
     })
     .catch((error) => console.error('Error loading navbar:', error));
 };

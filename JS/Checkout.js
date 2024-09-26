@@ -242,16 +242,17 @@ function getItemsFromCart() {
   const items = JSON.parse(localStorage.getItem('currentCart'));
   const result = [];
 
-  items.forEach((item) => {
-    result.push({
-      id: item.id,
-      name: item.name,
-      amount: item.amount,
-      imageSrc: item.image,
-      price: toNumber(item.price),
+  if (items) {
+    items.forEach((item) => {
+      result.push({
+        id: item.id,
+        name: item.name,
+        amount: item.amount,
+        imageSrc: item.image,
+        price: toNumber(item.price),
+      });
     });
-  });
-
+  }
   return result;
 }
 
