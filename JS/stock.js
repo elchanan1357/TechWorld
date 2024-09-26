@@ -348,7 +348,6 @@ const filteredProducts = () => {
 
 displayInventory();
 
-// Stock API
 
 /**
  * @description Remove quantity on existing product.
