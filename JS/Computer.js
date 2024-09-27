@@ -30,16 +30,16 @@ function listOfSort() {
  * create list of options
  */
 function listOfCompany() {
-  return `    <input onchange="filterByCompany(computers_arr,'Apple','Computer',0)" class="checkBox" type="checkbox" />
+  return `    <input id="AppleComputer" onchange="filterByCompany(computers_arr,'Apple','Computer',0)" class="checkBox" type="checkbox" />
                       Apple
                       <br />
-                      <input onchange="filterByCompany(computers_arr,'Lenovo','Computer',1)" class="checkBox" type="checkbox" />
+                      <input id="LenovoComputer" onchange="filterByCompany(computers_arr,'Lenovo','Computer',1)" class="checkBox" type="checkbox" />
                       Lenovo
                       <br />
-                      <input onchange="filterByCompany(computers_arr,'Dell','Computer',2)" class="checkBox" type="checkbox" />
+                      <input id="DellComputer" onchange="filterByCompany(computers_arr,'Dell','Computer',2)" class="checkBox" type="checkbox" />
                       Dell
                       <br />
-                      <input onchange="filterByCompany(computers_arr,'HP','Computer',2)" class="checkBox" type="checkbox" />
+                      <input id="HPComputer" onchange="filterByCompany(computers_arr,'HP','Computer',2)" class="checkBox" type="checkbox" />
                       HP`;
 }
 
@@ -49,13 +49,13 @@ function listOfCompany() {
  */
 function listOfColor() {
   return `
-                    <input onchange="filterByColor(computers_arr,'Black','Computer',3)"  class="checkBox" type="checkbox" />
+                    <input id="blackColor" onchange="filterByColor(computers_arr,'Black','Computer',3)"  class="checkBox" type="checkbox" />
                       Black
                       <br />
-                      <input onchange="filterByColor(computers_arr,'White','Computer',4)" class="checkBox" type="checkbox" />
+                      <input id="whiteColor" onchange="filterByColor(computers_arr,'White','Computer',4)" class="checkBox" type="checkbox" />
                       White
                       <br />
-                      <input onchange="filterByColor(computers_arr,'Silver','Computer',5)" class="checkBox" type="checkbox" />
+                      <input id="silverColor" onchange="filterByColor(computers_arr,'Silver','Computer',5)" class="checkBox" type="checkbox" />
                       Silver
     `;
 }

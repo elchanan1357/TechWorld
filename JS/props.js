@@ -30,16 +30,16 @@ function listOfSort() {
  * create list of options
  */
 function listOfCompany() {
-  return `    <input onchange="filterByCompany(props_arr,'Apple','Props',0)" class="checkBox" type="checkbox" />
+  return `    <input id="appleProps" onchange="filterByCompany(props_arr,'Apple','Props',0)" class="checkBox" type="checkbox" />
                       Apple
                       <br />
-                      <input onchange="filterByCompany(props_arr,'Bose','Props',1)" class="checkBox" type="checkbox" />
+                      <input id="boseProps" onchange="filterByCompany(props_arr,'Bose','Props',1)" class="checkBox" type="checkbox" />
                       Bose
                       <br />
-                      <input onchange="filterByCompany(props_arr,'Sony','Props',2)" class="checkBox" type="checkbox" />
+                      <input id="sonyProps" onchange="filterByCompany(props_arr,'Sony','Props',2)" class="checkBox" type="checkbox" />
                       Sony
                       <br />
-                      <input onchange="filterByCompany(props_arr,'Logitech','Props',2)" class="checkBox" type="checkbox" />
+                      <input id="logitechProps" onchange="filterByCompany(props_arr,'Logitech','Props',2)" class="checkBox" type="checkbox" />
                       Logitech`;
 }
 
@@ -49,13 +49,13 @@ function listOfCompany() {
  */
 function listOfColor() {
   return `
-                    <input onchange="filterByColor(props_arr,'Black','Props',3)"  class="checkBox" type="checkbox" />
+                    <input id="blackColor" onchange="filterByColor(props_arr,'Black','Props',3)"  class="checkBox" type="checkbox" />
                       Black
                       <br />
-                      <input onchange="filterByColor(props_arr,'White','Props',4)" class="checkBox" type="checkbox" />
+                      <input id="whiteColor" onchange="filterByColor(props_arr,'White','Props',4)" class="checkBox" type="checkbox" />
                       White
                       <br />
-                      <input onchange="filterByColor(props_arr,'Silver','Props',5)" class="checkBox" type="checkbox" />
+                      <input id="silverColor" onchange="filterByColor(props_arr,'Silver','Props',5)" class="checkBox" type="checkbox" />
                       Silver
     `;
 }

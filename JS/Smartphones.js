@@ -30,13 +30,13 @@ function listOfSort() {
  * create list of options
  */
 function listOfCompany() {
-  return `    <input onchange="filterByCompany(smartphones_arr,'Apple','Smartphone',0)" class="checkBox" type="checkbox" />
+  return `    <input id="appleSmartphone" onchange="filterByCompany(smartphones_arr,'Apple','Smartphone',0)" class="checkBox" type="checkbox" />
                     Apple
                     <br />
-                    <input onchange="filterByCompany(smartphones_arr,'Samsung','Smartphone',1)" class="checkBox" type="checkbox" />
+                    <input id="samsungSmartphone" onchange="filterByCompany(smartphones_arr,'Samsung','Smartphone',1)" class="checkBox" type="checkbox" />
                     Samsung
                     <br />
-                    <input onchange="filterByCompany(smartphones_arr,'Xiaomi','Smartphone',2)" class="checkBox" type="checkbox" />
+                    <input id="xiaomiSmartphone" onchange="filterByCompany(smartphones_arr,'Xiaomi','Smartphone',2)" class="checkBox" type="checkbox" />
                     Xiaomi`;
 }
 
@@ -46,13 +46,13 @@ function listOfCompany() {
  */
 function listOfColor() {
   return `
-                  <input onchange="filterByColor(smartphones_arr,'Black','Smartphone',3)"  class="checkBox" type="checkbox" />
+                  <input  id="blackColor" onchange="filterByColor(smartphones_arr,'Black','Smartphone',3)"  class="checkBox" type="checkbox" />
                     Black
                     <br />
-                    <input onchange="filterByColor(smartphones_arr,'White','Smartphone',4)" class="checkBox" type="checkbox" />
+                    <input id="whiteColor" onchange="filterByColor(smartphones_arr,'White','Smartphone',4)" class="checkBox" type="checkbox" />
                     White
                     <br />
-                    <input onchange="filterByColor(smartphones_arr,'Silver','Smartphone',5)" class="checkBox" type="checkbox" />
+                    <input id="silverColor" onchange="filterByColor(smartphones_arr,'Silver','Smartphone',5)" class="checkBox" type="checkbox" />
                     Silver
   `;
 }
