@@ -55,7 +55,7 @@ const loadNavbar = () => {
 
       // Initialize dropdowns inside the newly fetched navbar
       // This is necessary even with the event listener inside the shared file, because the navbar was loaded asynchronously
-      initializeDropdowns();
+      loadBootstrapAndInitialize();
     })
     .catch((error) => console.error('Error loading navbar:', error));
 };

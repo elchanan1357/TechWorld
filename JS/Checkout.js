@@ -1,27 +1,6 @@
 let items = getItemsFromCart();
 let totalPrice = 0;
 
-(function () {
-  emailjs.init('BqR5Xa490S-GYGE6C');
-})();
-
-function sendEmail(recipientEmail, recipientName, message) {
-  const templateParams = {
-    to_email: recipientEmail,
-    to_name: recipientName,
-    message: message,
-  };
-
-  emailjs.send('service_dtew28l', 'template_qo0dfug', templateParams).then(
-    function (response) {
-      console.log('Email sent successfully!', response.status, response.text);
-    },
-    function (error) {
-      console.log('Failed to send email.', error);
-    },
-  );
-}
-
 function renderItems() {
   const itemList = document.getElementById('item-list');
   itemList.innerHTML = '';
@@ -87,7 +66,8 @@ function handlePaymentAlert() {
       sendEmail(
         userData.email,
         userData.firstName,
-        `Thanks from buying from us`,
+        document.getElementById('total-price').innerText,
+        JSON.parse(localStorage.getItem('currentCart')),
       );
     }
   });
@@ -241,17 +221,17 @@ function updateItemAndTotalPrices(item, operator) {
 function getItemsFromCart() {
   const items = JSON.parse(localStorage.getItem('currentCart'));
   const result = [];
-
-  items.forEach((item) => {
-    result.push({
-      id: item.id,
-      name: item.name,
-      amount: item.amount,
-      imageSrc: item.image,
-      price: toNumber(item.price),
+  if (items) {
+    items.forEach((item) => {
+      result.push({
+        id: item.id,
+        name: item.name,
+        amount: item.amount,
+        imageSrc: item.image,
+        price: toNumber(item.price),
+      });
     });
-  });
-
+  }
   return result;
 }
 

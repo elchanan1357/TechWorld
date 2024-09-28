@@ -31,13 +31,13 @@ function listOfSort() {
  * create list of options
  */
 function listOfCompany() {
-  return `    <input onchange="filterByCompany(tablets_arr,'Apple','Tablets',0)" class="checkBox" type="checkbox" />
+  return `    <input id="appleTablets" onchange="filterByCompany(tablets_arr,'Apple','Tablets',0)" class="checkBox" type="checkbox" />
                       Apple
                       <br />
-                      <input onchange="filterByCompany(tablets_arr,'Samsung','Tablets',1)" class="checkBox" type="checkbox" />
+                      <input id="samsungTablets" onchange="filterByCompany(tablets_arr,'Samsung','Tablets',1)" class="checkBox" type="checkbox" />
                       Samsung
                       <br />
-                      <input onchange="filterByCompany(tablets_arr,'Lenovo','Tablets',2)" class="checkBox" type="checkbox" />
+                      <input id="lenovoTablets" onchange="filterByCompany(tablets_arr,'Lenovo','Tablets',2)" class="checkBox" type="checkbox" />
                       Lenovo`;
 }
 
@@ -47,13 +47,13 @@ function listOfCompany() {
  */
 function listOfColor() {
   return `
-                    <input onchange="filterByColor(tablets_arr,'Black','Tablets',3)"  class="checkBox" type="checkbox" />
+                    <input id="blackColor" onchange="filterByColor(tablets_arr,'Black','Tablets',3)"  class="checkBox" type="checkbox" />
                       Black
                       <br />
-                      <input onchange="filterByColor(tablets_arr,'White','Tablets',4)" class="checkBox" type="checkbox" />
+                      <input id="whiteColor" onchange="filterByColor(tablets_arr,'White','Tablets',4)" class="checkBox" type="checkbox" />
                       White
                       <br />
-                      <input onchange="filterByColor(tablets_arr,'Silver','Tablets',5)" class="checkBox" type="checkbox" />
+                      <input id="silverColor" onchange="filterByColor(tablets_arr,'Silver','Tablets',5)" class="checkBox" type="checkbox" />
                       Silver
     `;
 }
