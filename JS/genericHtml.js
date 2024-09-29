@@ -90,27 +90,6 @@ function buildTopLine() {
                       />
                     </div>
 
-                    <div class="position-relative mt-2" style="height: 40px">
-                      <input
-                        type="range"
-                        class="form-range slider position-absolute top-0 start-0"
-                        min="389"
-                        max="5429"
-                        id="priceRange"
-                        value="389"
-                        style="width: 100%"
-                      />
-                      <input
-                        type="range"
-                        class="form-range slider position-absolute top-0 start-0"
-                        min="389"
-                        max="5429"
-                        id="priceRangeMax"
-                        value="5429"
-                        style="width: 100%"
-                      />
-                    </div>
-
                     <div id="filterIn" class="filter-in">
                     </div>
                   </div>
