@@ -269,11 +269,75 @@ function checkInput() {
   let id = document.getElementById("nameOnCard").value;
   let address = document.getElementById("billingAddress").value;
 
-  console.log("card number: " + cardNumber);
-  console.log("date: " + date);
-  console.log("cvv: " + cvv);
-  console.log("id: " + id);
-  console.log("address: " + address);
+  // checking the card number
+  if (!isValidNumber(cardNumber) || cardNumber.length != 16) {
+    alert("the card number not valid");
+    return;
+  }
+
+  //checking the date of card
+  let dateCorrect = true;
+  if (date.includes("/") && date.length === 5) {
+    let dateArr = date.split("/");
+    //if date is number
+    if (
+      (!isValidNumber(dateArr[0]) && dateArr[0].length === 2) ||
+      !isValidNumber(dateArr[1] && dateArr[1].length === 2)
+    ) {
+      //if date is legal
+      if (dateArr[0] <= 31 && dateArr[1] <= 12) {
+        //the date correct
+      } else dateCorrect = false;
+    } else dateCorrect = false;
+  } else dateCorrect = false;
+
+  if (!dateCorrect) {
+    alert("the date not valid");
+    return;
+  }
+
+  //checking the cvv of card
+  if (!isValidNumber(cvv) || cvv.length != 3) {
+    alert("the cvv not valid");
+    return;
+  }
+
+  //checking the id of card
+  if (!isValidNumber(id) || !checkDigit(id)) {
+    alert("the id not valid");
+    return;
+  }
+
+  //checking the address
+  if (!isValidAddress(address)) {
+    alert("the address not valid");
+    return;
+  }
+}
+
+/**
+ * check the last digit of id
+ * @param {string} id
+ * @returns {boolean}
+ */
+function checkDigit(id) {
+  //the id in correct
+  if (id.length != 9) return false;
+
+  let totalSum = 0;
+  //check the last digit
+  for (let i = 0; i < 8; i++) {
+    let digit = parseInt(id[i]);
+    if (i % 2 === 0) totalSum += digit;
+    else {
+      let doubled = digit * 2;
+      totalSum += doubled > 9 ? doubled - 9 : doubled;
+    }
+  }
+
+  let finalCheck = (10 - (totalSum % 10)) % 10;
+
+  return finalCheck === parseInt(id[8]);
 }
 
 /**
@@ -283,4 +347,13 @@ function checkInput() {
  */
 function isValidNumber(num) {
   return /^\d+$/.test(num);
+}
+
+/**
+ * checking if the address is correct
+ * @param {string} address
+ * @returns {boolean}
+ */
+function isValidAddress(address) {
+  return /^[a-zA-Z\u0590-\u05FF ]+[0-9]+[a-zA-Z\u0590-\u05FF ]+$/.test(address);
 }
