@@ -1,18 +1,14 @@
 //when window is on loading
 window.onload = function () {
   createTopLine(); //create the top line
-  print(smartphones_arr, 'Smartphone'); //create element in page
+  print(smartphones_arr, "Smartphone"); //create element in page
 
-  //create list of sort
-  document.getElementById('sortList').innerHTML = listOfSort();
+  //create button for price filter
+  document.getElementById("filterIn").innerHTML = `
+  <button onclick="filter(smartphones_arr,'Smartphone',389,5429)" class="mt-2">Filter</button>`;
+  createPlaceholder(389, 5429);
 
-  //create list of filtering
-  document.getElementById('filterIn').innerHTML = `
-  <button onclick="filter(smartphones_arr,'Smartphone')" class="mt-2">Filter</button>`;
-  document.getElementById('listColor').innerHTML = listOfColor();
-  document.getElementById('listCompany').innerHTML = listOfCompany();
-
-  for (let i = 0; i < 5; i++) createArrow('arrow_up', 'arrow_down', i);
+  createListOfElement();
 };
 
 /**

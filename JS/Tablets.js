@@ -2,18 +2,14 @@
 window.onload = function () {
   createTopLine(); //create the top line
 
-  print(tablets_arr, 'Tablets'); //create element in page
+  print(tablets_arr, "Tablets"); //create element in page
 
-  //create list of sort
-  document.getElementById('sortList').innerHTML = listOfSort();
+  //create button for price filter
+  document.getElementById("filterIn").innerHTML = `
+  <button onclick="filter(tablets_arr,'Tablets',1599,5399)" class="mt-2">Filter</button>`;
+  createPlaceholder(1599, 5399);
 
-  //create list of filtering
-  document.getElementById('filterIn').innerHTML = `
-  <button onclick="filter(tablets_arr,'Tablets')" class="mt-2">Filter</button>`;
-  document.getElementById('listColor').innerHTML = listOfColor();
-  document.getElementById('listCompany').innerHTML = listOfCompany();
-
-  for (let i = 0; i < 5; i++) createArrow('arrow_up', 'arrow_down', i);
+  createListOfElement();
 };
 
 /**
@@ -50,8 +46,8 @@ function listOfColor() {
                     <input id="blackColor" onchange="filterByColor(tablets_arr,'Black','Tablets',3)"  class="checkBox" type="checkbox" />
                       Black
                       <br />
-                      <input id="whiteColor" onchange="filterByColor(tablets_arr,'White','Tablets',4)" class="checkBox" type="checkbox" />
-                      White
+                      <input id="whiteColor" onchange="filterByColor(tablets_arr,'Blue','Tablets',4)" class="checkBox" type="checkbox" />
+                      Blue
                       <br />
                       <input id="silverColor" onchange="filterByColor(tablets_arr,'Silver','Tablets',5)" class="checkBox" type="checkbox" />
                       Silver

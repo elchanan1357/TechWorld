@@ -6,6 +6,8 @@
 function createTopLine() {
   let topLine = document.getElementById("topLine");
   topLine.innerHTML = buildTopLine(); //return the html  of top line
+
+  for (let i = 0; i < 5; i++) createArrow("arrow_up", "arrow_down", i);
 }
 
 /**
@@ -84,6 +86,25 @@ function displayElement(_id, i) {
     arrowUp.style.display = "none";
     flag_display = false;
   }
+}
+
+/**
+ * create placeholder for filter input
+ * @param {number} from
+ * @param {number} to
+ */
+function createPlaceholder(from, to) {
+  document.getElementById("fromPrice").placeholder = from;
+  document.getElementById("toPrice").placeholder = to;
+}
+
+/**
+ * create list for all inner page
+ */
+function createListOfElement() {
+  document.getElementById("sortList").innerHTML = listOfSort();
+  document.getElementById("listColor").innerHTML = listOfColor();
+  document.getElementById("listCompany").innerHTML = listOfCompany();
 }
 
 ///------ function of main pages ------///

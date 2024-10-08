@@ -7,6 +7,17 @@ function parsePrice(price) {
   return parseFloat(price.replace(/[₪,]/g, "")); //remove tags
 }
 
+/**
+ * checking if the num is number or not
+ * @param {number} num
+ * @returns {boolean}
+ */
+function isValidNumber(num) {
+  return /^\d+$/.test(num);
+}
+
+//--------------- sort ----------------//
+
 let sort_arr = []; //for all type of sort
 /**
  * sort element by price low to high
@@ -56,14 +67,21 @@ function popular(json_arr, id) {
   print(sort_arr, id); //display element
 }
 
+//--------------- filter ----------------//
+
 /**
  * filter element from price between (from , to)
  * @param {object} json_arr data of page
  * @param {number} id id of page
  */
-function filter(json_arr, id) {
-  let from = document.getElementById("fromPrice").value;
-  let to = document.getElementById("toPrice").value;
+function filter(json_arr, id, min, max) {
+  let from = document.getElementById("fromPrice").value || min;
+  let to = document.getElementById("toPrice").value || max;
+
+  if (!isValidNumber(from) || !isValidNumber(to)) {
+    alert("is number not valid");
+    return;
+  }
 
   //just element between (from , to)
   let temp_arr = json_arr.filter((item) => {

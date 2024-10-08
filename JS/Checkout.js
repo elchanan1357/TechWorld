@@ -265,36 +265,18 @@ function checkInput() {
 
   let dateArr = date.split("/");
   if (
-    (!isValidNumber(dateArr[0]) || dateArr[0].length !== 2) ||
+    !isValidNumber(dateArr[0]) ||
+    dateArr[0].length !== 2 ||
     !isValidNumber(dateArr[1] || dateArr[1].length !== 2)
   ) {
     alert("The data is not a number or in valid length");
     return false; //data is not a number or in valid length
   }
 
-  if (dateArr[0] > 12 || dateArr[0] <= 0 || dateArr[1] < 24){
+  if (dateArr[0] > 12 || dateArr[0] <= 0 || dateArr[1] < 24) {
     alert("the date not valid");
     return false; //the data wrong
   }
-  // let dateCorrect = true;
-  // if (date.includes("/")) {
-  //   let dateArr = date.split("/");
-  //   //if date is number
-  //   if (
-  //     (!isValidNumber(dateArr[0]) && dateArr[0].length === 2) ||
-  //     !isValidNumber(dateArr[1] && dateArr[1].length === 2)
-  //   ) {
-  //     //if date is legal
-  //     if (dateArr[0] <= 12 && dateArr[0] > 0 && dateArr[1] >= 24) {
-  //       //the date correct
-  //     } else dateCorrect = false;
-  //   } else dateCorrect = false;
-  // } else dateCorrect = false;
-
-  // if (!dateCorrect) {
-  //   alert("the date not valid");
-  //   return false;
-  // }
 
   //checking the cvv of card
   if (!isValidNumber(cvv) || cvv.length != 3) {
