@@ -1,18 +1,14 @@
 //when window is on loading
 window.onload = function () {
   createTopLine(); //create the top line
-  print(props_arr, 'Props'); //create element in page
+  print(props_arr, "Props"); //create element in page
 
-  //create list of sort
-  document.getElementById('sortList').innerHTML = listOfSort();
+  //create button for price filter
+  document.getElementById("filterIn").innerHTML = `
+  <button onclick="filter(props_arr,'Props',69,2500)" class="mt-2">Filter</button>`;
+  createPlaceholder(69, 2500);
 
-  //create list of filtering
-  document.getElementById('filterIn').innerHTML = `
-  <button onclick="filter(props_arr,'Props')" class="mt-2">Filter</button>`;
-  document.getElementById('listColor').innerHTML = listOfColor();
-  document.getElementById('listCompany').innerHTML = listOfCompany();
-
-  for (let i = 0; i < 5; i++) createArrow('arrow_up', 'arrow_down', i);
+  createListOfElement();
 };
 
 /**

@@ -72,8 +72,6 @@ function buildTopLine() {
                         id="toPrice"
                         class="ml-5"
                         type="number"
-                        value="5429"
-                        placeholder="5,429"
                          min="389"
                         max="5429"
                         width="20px"
@@ -82,32 +80,9 @@ function buildTopLine() {
                       <input
                         id="fromPrice"
                         type="number"
-                        value="389"
-                        placeholder="389"
                         width="20px"
                         min="389"
                         max="5429"
-                      />
-                    </div>
-
-                    <div class="position-relative mt-2" style="height: 40px">
-                      <input
-                        type="range"
-                        class="form-range slider position-absolute top-0 start-0"
-                        min="389"
-                        max="5429"
-                        id="priceRange"
-                        value="389"
-                        style="width: 100%"
-                      />
-                      <input
-                        type="range"
-                        class="form-range slider position-absolute top-0 start-0"
-                        min="389"
-                        max="5429"
-                        id="priceRangeMax"
-                        value="5429"
-                        style="width: 100%"
                       />
                     </div>
 
